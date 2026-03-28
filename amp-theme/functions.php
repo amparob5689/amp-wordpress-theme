@@ -377,3 +377,4 @@ function amp_get_metric( $num, $field ) {
 	$default_key = $num . '_' . $field;
 	return get_theme_mod( $key, isset( $defaults[ $default_key ] ) ? $defaults[ $default_key ] : '' );
 }
+
