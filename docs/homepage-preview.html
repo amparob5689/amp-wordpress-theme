@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiliate Marketing Agency for Financial Brands | AMP</title>
+  <meta name="description" content="AMP is an affiliate marketing agency for financial brands — led by ex-PayPal leadership, driving +241% YoY growth and $1M+ in marketplace revenue for fintech and finance clients.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-dark: #0D1219;
+      --navy: #192333;
+      --navy-mid: #1E2A3A;
+      --marigold: #F5A623;
+      --marigold-bright: #FFB000;
+      --marigold-hover: #E09400;
+      --marigold-glow: rgba(245, 166, 35, 0.12);
+      --cream: #F7F8FA;
+      --white: #FFFFFF;
+      --slate: #5E6E82;
+      --slate-light: #8896A7;
+      --text: #0F172A;
+      --text-secondary: #3B4A5E;
+      --border: #E4E7EC;
+      --border-light: #EEF0F4;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 1px 3px rgba(0,0,0,0.03), 0 4px 16px rgba(0,0,0,0.03);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.07);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --container: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== AMP SQUIGGLE ===== */
+    .amp-squiggle {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .amp-squiggle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: blur(1.5px);
+    }
+
+    .amp-squiggle.hero-squiggle {
+      top: -5.7%;
+      right: -3.8%;
+      width: 416px;
+      height: 497px;
+      opacity: 0.09;
+      transform: scaleX(-1);
+    }
+
+    .amp-squiggle.why-squiggle {
+      bottom: -32.5%;
+      left: -10.5%;
+      width: 550px;
+      height: 660px;
+      opacity: 0.065;
+      transform: scaleX(-1);
+    }
+
+    .amp-squiggle.cta-squiggle {
+      bottom: -28%;
+      left: -14%;
+      width: 650px;
+      height: 780px;
+      opacity: 0.07;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 768px) {
+      .amp-squiggle.hero-squiggle { width: 220px; height: 265px; top: -6%; right: -5%; }
+      .amp-squiggle.why-squiggle { width: 340px; height: 408px; right: -20%; }
+      .amp-squiggle.cta-squiggle { width: 360px; height: 432px; left: -16%; }
+    }
+
+    /* ===== SCROLL PROGRESS ===== */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: var(--marigold);
+      width: 0%;
+      z-index: 1002;
+      transition: width 0.05s linear;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(13, 18, 25, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 0;
+      box-shadow: 0 1px 20px rgba(0,0,0,0.2);
+    }
+
+    .nav-container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      transition: height 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav.scrolled .nav-logo img {
+        height: 32px;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      background: var(--marigold) !important;
+      color: var(--navy-dark) !important;
+      padding: 10px 22px !important;
+      border-radius: var(--radius-sm);
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      transition: all var(--transition) !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--marigold-hover) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px var(--marigold-glow);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 1001;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: all var(--transition);
+      border-radius: 2px;
+    }
+
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 18, 25, 0.98);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+      z-index: 999;
+    }
+
+    .mobile-menu.active { opacity: 1; pointer-events: all; }
+
+    .mobile-menu a {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      transition: color var(--transition);
+    }
+
+    .mobile-menu a:hover { color: var(--marigold); }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse 80% 50% at 65% 20%, rgba(245, 166, 35, 0.04) 0%, transparent 100%),
+        radial-gradient(ellipse 50% 70% at 15% 80%, rgba(30, 42, 58, 0.3) 0%, transparent 100%),
+        linear-gradient(180deg, #0D1219 0%, #131B26 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-h1 {
+      font-size: clamp(40px, 5vw, 58px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+    }
+
+    .hero-h1 em {
+      color: var(--marigold);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 15px 30px;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--marigold);
+      color: var(--navy-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--marigold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px var(--marigold-glow);
+    }
+
+    .btn-primary svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--transition);
+    }
+
+    .btn-primary:hover svg { transform: translateX(3px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--text);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-secondary.on-dark {
+      color: rgba(255,255,255,0.8);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .btn-secondary.on-dark:hover {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: all var(--transition);
+    }
+
+    .metric-card:hover {
+      border-color: rgba(245, 166, 35, 0.25);
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .metric-number {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--marigold);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .metric-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
+    }
+
+
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      padding: 44px 0;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--white);
+    }
+
+    .trust-bar-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--slate-light);
+      margin-bottom: 28px;
+    }
+
+    .trust-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .trust-logos::-webkit-scrollbar { display: none; }
+
+    .trust-logos img {
+      height: 28px;
+      opacity: 0.35;
+      filter: grayscale(100%);
+      transition: all var(--transition);
+    }
+
+    .trust-logos img:hover {
+      opacity: 0.7;
+      filter: grayscale(0%);
+    }
+
+    .trust-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #C0C7D0;
+      transition: color var(--transition);
+      white-space: nowrap;
+    }
+
+    .trust-name:hover { color: var(--text-secondary); }
+
+    /* ===== LOGO BARS ===== */
+    .logo-bar {
+      padding: 40px 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      background: var(--white);
+    }
+
+    .logo-bar.on-dark {
+      background: var(--navy-mid);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .logo-bar-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--slate-light);
+      margin-bottom: 24px;
+    }
+
+    .logo-bar.on-dark .logo-bar-label {
+      color: rgba(255,255,255,0.30);
+    }
+
+    .logo-bar-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .logo-bar-logos::-webkit-scrollbar { display: none; }
+
+    .logo-bar.on-dark .trust-name {
+      color: rgba(255,255,255,0.25);
+    }
+
+    .logo-bar.on-dark .trust-name:hover {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .logo-bar-logos img {
+      height: 24px;
+      opacity: 0.3;
+      filter: grayscale(100%);
+      transition: all var(--transition);
+    }
+
+    .logo-bar-logos img:hover {
+      opacity: 0.65;
+      filter: grayscale(0%);
+    }
+
+    .logo-bar.on-dark .logo-bar-logos img {
+      opacity: 0.25;
+      filter: grayscale(100%) brightness(10);
+    }
+
+    .logo-bar.on-dark .logo-bar-logos img:hover {
+      opacity: 0.6;
+    }
+
+    /* ===== SECTION UTILITIES ===== */
+    .section { padding: 100px 0; }
+
+    .section-overline {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--marigold);
+      margin-bottom: 16px;
+    }
+
+    .section-overline.on-light {
+      color: var(--slate-light);
+    }
+
+    .section-heading {
+      font-size: clamp(32px, 3.5vw, 42px);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading.light { color: var(--white); }
+
+    .section-sub {
+      font-size: 17px;
+      color: var(--slate);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    .section-sub.light { color: rgba(255,255,255,0.50); }
+
+    .section-header { margin-bottom: 56px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-sub { margin: 0 auto; }
+
+    /* ===== SERVICES ===== */
+    .services { background: var(--cream); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 40px 36px;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .service-card.featured {
+      background: var(--navy);
+      border-color: transparent;
+      color: var(--white);
+    }
+
+    .service-card.featured:hover {
+      box-shadow: 0 8px 40px rgba(13, 18, 25, 0.3);
+    }
+
+    .service-card.featured .service-title { color: var(--white); }
+    .service-card.featured .service-desc { color: rgba(255,255,255,0.55); }
+    .service-card.featured .service-link { color: var(--marigold); }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      background: rgba(245, 166, 35, 0.08);
+    }
+
+    .service-card.featured .service-icon {
+      background: rgba(245, 166, 35, 0.12);
+    }
+
+    .service-icon svg {
+      width: 22px;
+      height: 22px;
+      color: var(--marigold);
+    }
+
+    .service-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .service-desc {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      transition: gap var(--transition);
+    }
+
+    .service-link:hover { gap: 10px; }
+    .service-link svg { width: 14px; height: 14px; }
+
+    /* ===== CASE STUDIES ===== */
+    .case-studies { background: var(--white); }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .case-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all var(--transition);
+      background: var(--white);
+    }
+
+    .case-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .case-card-accent {
+      height: 3px;
+      background: var(--marigold);
+    }
+
+    .case-card-body { padding: 36px; }
+
+    .case-client {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--slate-light);
+      margin-bottom: 24px;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .case-metric-value {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .case-metric-label {
+      font-size: 13px;
+      color: var(--slate);
+      margin-top: 4px;
+    }
+
+    .case-desc {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      transition: gap var(--transition);
+    }
+
+    .case-link:hover { gap: 10px; }
+    .case-link svg { width: 14px; height: 14px; }
+
+    .case-footer {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ===== WHY AMP ===== */
+    .why-amp {
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(245, 166, 35, 0.03) 0%, transparent 100%),
+        linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-container {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .why-quote {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(28px, 3vw, 34px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .why-quote em {
+      color: var(--marigold);
+      font-style: normal;
+    }
+
+    .why-body {
+      font-size: 16px;
+      color: rgba(255,255,255,0.50);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .why-founder {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .why-founder-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--marigold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--navy-dark);
+    }
+
+    .why-founder-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--white);
+    }
+
+    .why-founder-title {
+      font-size: 13px;
+      color: rgba(255,255,255,0.40);
+      margin-top: 2px;
+    }
+
+    .why-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .why-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      transition: all var(--transition);
+    }
+
+    .why-item:hover {
+      border-color: rgba(245, 166, 35, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .why-item-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .why-item-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: rgba(245, 166, 35, 0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-item-icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--marigold);
+    }
+
+    .why-item-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--white);
+    }
+
+    .why-item-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.40);
+      line-height: 1.7;
+      padding-left: 48px;
+    }
+
+    /* ===== HOW WE WORK ===== */
+    .how-we-work {
+      background: var(--white);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 36px 28px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      transition: all var(--transition);
+    }
+
+    .process-step:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .process-number {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--marigold);
+      opacity: 0.25;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: opacity var(--transition);
+    }
+
+    .process-step:hover .process-number {
+      opacity: 0.45;
+    }
+
+    .process-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .process-desc {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.7;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { background: var(--cream); }
+
+    .testimonials .section-header { text-align: center; }
+    .testimonials .section-sub { margin: 0 auto; }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .testimonial-quote-mark {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--marigold);
+      line-height: 1;
+      opacity: 0.15;
+      position: absolute;
+      top: 24px;
+      left: 32px;
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testimonial-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .testimonial-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .testimonial-role {
+      font-size: 13px;
+      color: var(--slate);
+      margin-top: 2px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq { background: var(--white); }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      transition: color var(--transition);
+    }
+
+    .faq-question:hover { color: var(--marigold); }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-left: 20px;
+      color: var(--slate-light);
+      transition: transform var(--transition);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+      color: var(--marigold);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-answer-inner {
+      padding: 0 0 28px;
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.8;
+      max-width: 680px;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: var(--navy-dark);
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-heading {
+      font-size: clamp(28px, 3.5vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+      position: relative;
+    }
+
+    .cta-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .cta-section .btn { position: relative; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #080C12;
+      padding: 60px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand { max-width: 280px; }
+
+    .footer-logo {
+      margin-bottom: 14px;
+    }
+
+    .footer-logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.7;
+    }
+
+    .footer-nav-group h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.50);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 18px;
+    }
+
+    .footer-nav-group a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255,255,255,0.35);
+      padding: 5px 0;
+      transition: color var(--transition);
+    }
+
+    .footer-nav-group a:hover { color: var(--marigold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .footer-contact {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      transition: color var(--transition);
+    }
+
+    .footer-contact:hover { color: var(--marigold); }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-container { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-metrics { max-width: 480px; margin: 0 auto; }
+      .services-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .service-card.featured { grid-row: auto; }
+      .case-grid { grid-template-columns: 1fr; }
+      .why-container { grid-template-columns: 1fr; gap: 48px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .hero { min-height: auto; padding: 140px 0 80px; }
+      .hero-h1 { font-size: 34px; }
+      .hero-sub { font-size: 16px; }
+      .hero-metrics { gap: 12px; }
+      .metric-card { padding: 20px 16px; }
+      .metric-number { font-size: 28px; }
+      .trust-logos,
+      .logo-bar-logos {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 32px;
+        padding: 0 24px;
+        margin: 0 -24px;
+        width: calc(100% + 48px);
+      }
+      .trust-name { font-size: 14px; white-space: nowrap; }
+      .case-metrics { gap: 12px; }
+      .case-metric-value { font-size: 22px; }
+      .section-heading { font-size: 28px; }
+      .why-quote { font-size: 24px; }
+      .why-item-desc { padding-left: 0; margin-top: 8px; }
+      .testimonial-card { padding: 28px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .footer-container { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-metrics { grid-template-columns: 1fr 1fr; max-width: 100%; }
+      .case-metrics {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        text-align: center;
+      }
+      .case-metric-value { font-size: 20px; }
+      .case-metric-label { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo"><img src="../amp-theme/assets/images/logos/AMP White logo - no background.svg" alt="Affiliate Marketing Partners"></a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Schedule an Audit</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#results" onclick="closeMobile()">Results</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="#contact" class="btn btn-primary" onclick="closeMobile()" style="margin-top:16px">Schedule an Audit</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="amp-squiggle hero-squiggle">
+      <img src="../amp-theme/assets/images/logos/amp_squiggle.png" alt="">
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-h1 fade-in">The Affiliate Agency for<br><em>Financial Brands</em></h1>
+        <p class="hero-sub fade-in fade-in-delay-1">We build and manage performance affiliate programs for fintech brands and financial institutions that demand measurable, compliant growth.</p>
+        <a href="#contact" class="btn btn-primary fade-in fade-in-delay-2">
+          Schedule a Free Program Audit
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card fade-in fade-in-delay-1">
+          <div class="metric-number" data-target="241" data-prefix="+" data-suffix="%">+0%</div>
+          <div class="metric-label">YoY Revenue Growth</div>
+        </div>
+        <div class="metric-card fade-in fade-in-delay-2">
+          <div class="metric-number" data-target="5" data-prefix="" data-suffix="+">0+</div>
+          <div class="metric-label">Fintech Clients Managed</div>
+        </div>
+        <div class="metric-card fade-in fade-in-delay-3">
+          <div class="metric-number" data-target="1" data-prefix="$" data-suffix="M+">$0M+</div>
+          <div class="metric-label">Marketplace Revenue</div>
+        </div>
+        <div class="metric-card fade-in fade-in-delay-4">
+          <div class="metric-number" data-target="14" data-prefix="" data-suffix="+ yrs">0+ yrs</div>
+          <div class="metric-label">Industry Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-label fade-in">Trusted by Leading Financial Brands</div>
+      <div class="trust-logos fade-in fade-in-delay-1">
+        <!-- Replace with <img> tags when logos are available:
+        <img src="../amp-theme/assets/images/logos/floatme.svg" alt="FloatMe">
+        <img src="../amp-theme/assets/images/logos/ryder-toys.svg" alt="Ryder Toys">
+        etc. -->
+        <span class="trust-name">FloatMe</span>
+        <span class="trust-name">Ryder Toys</span>
+        <span class="trust-name">Arro Finance</span>
+        <span class="trust-name">Piere</span>
+        <span class="trust-name">Advance Funds Network</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-overline on-light">WHAT WE DO</div>
+        <h2 class="section-heading">Affiliate Services Built for Financial Brands</h2>
+        <p class="section-sub">Specialized capabilities for fintech companies, banks, lenders, and financial institutions that need affiliate programs managed with the rigor their industry demands.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Row 1 left: dark -->
+        <div class="service-card featured fade-in">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 0m-3.935 0a2.25 2.25 0 00-3.935 0m7.87 0a2.25 2.25 0 10-3.935-2.186m0 0a2.25 2.25 0 00-3.933 0M3.75 12h16.5" /></svg>
+          </div>
+          <h3 class="service-title">Affiliate Program Management</h3>
+          <p class="service-desc">We take full ownership of your affiliate program — from partner strategy and recruitment to optimization and compliance governance. Whether you're launching a new program or scaling an underperforming one, we build it into a high-quality acquisition channel with vetted finance publishers and transparent performance metrics.</p>
+          <a href="services-preview.html#affiliate-program-management" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+        <!-- Row 1 right: light -->
+        <div class="service-card fade-in fade-in-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+          </div>
+          <h3 class="service-title">App Monetization</h3>
+          <p class="service-desc">We design and manage embedded partner offer experiences inside your fintech app — curating advertisers that align with your users, your brand, and your compliance requirements. The result: incremental revenue and higher LTV without compromising the product experience your customers trust.</p>
+          <a href="services-preview.html#app-monetization" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+        <!-- Row 2 left: dark -->
+        <div class="service-card featured fade-in fade-in-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+          </div>
+          <h3 class="service-title">AMP Partner Network</h3>
+          <p class="service-desc">Don't need full program management? Access our curated network of financial brand partnerships directly. We connect fintech apps and finance publishers with vetted, high-converting offers — giving you the partnerships without the overhead of a managed engagement.</p>
+          <a href="services-preview.html#amp-partner-network" class="service-link">Join the Network <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+        <!-- Row 2 right: light -->
+        <div class="service-card fade-in fade-in-delay-3">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
+          </div>
+          <h3 class="service-title">Reporting &amp; Analytics</h3>
+          <p class="service-desc">Centralized dashboards that go beyond clicks and impressions. We track the metrics that matter to fintech — funded accounts, approval rates, LTV, and compliance flags — and deliver weekly insights that give your leadership team confidence in the channel.</p>
+          <a href="services-preview.html#reporting-analytics" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms Bar -->
+  <section class="logo-bar">
+    <div class="container">
+      <div class="logo-bar-label fade-in">Platforms We Work With</div>
+      <div class="logo-bar-logos fade-in fade-in-delay-1">
+        <!-- Replace with <img> tags when logos are available:
+        <img src="../amp-theme/assets/images/logos/impact.svg" alt="Impact">
+        etc. -->
+        <span class="trust-name">Impact</span>
+        <span class="trust-name">Everflow</span>
+        <span class="trust-name">CJ</span>
+        <span class="trust-name">Awin</span>
+        <span class="trust-name">ShareASale</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="section case-studies" id="results">
+    <div class="container">
+      <div class="section-header centered fade-in">
+        <div class="section-overline on-light">RESULTS</div>
+        <h2 class="section-heading">Proven Results for Financial Brands</h2>
+        <p class="section-sub">Measurable outcomes from real affiliate programs we manage.</p>
+      </div>
+      <div class="case-grid">
+        <div class="case-card fade-in">
+          <div class="case-card-accent"></div>
+          <div class="case-card-body">
+            <div class="case-client">FloatMe</div>
+            <div class="case-metrics">
+              <div><div class="case-metric-value">+241%</div><div class="case-metric-label">YoY Revenue</div></div>
+              <div><div class="case-metric-value">+88%</div><div class="case-metric-label">YoY EPC</div></div>
+              <div><div class="case-metric-value">+540%</div><div class="case-metric-label">Partner Growth</div></div>
+            </div>
+            <p class="case-desc">FloatMe is an earned-wage access app offering budgeting tools and cash advances to millions of users. AMP took over their marketplace strategy, growing it from a handful of advertisers to 30+ curated partners — transforming affiliate into their fastest-growing revenue channel.</p>
+            <a href="#" class="case-link">Read Case Study <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="case-footer fade-in">
+        <a href="#" class="btn btn-secondary">View All Case Studies <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:14px;height:14px"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why AMP -->
+  <section class="section why-amp" id="about">
+    <div class="amp-squiggle why-squiggle">
+      <img src="../amp-theme/assets/images/logos/amp_squiggle.png" alt="">
+    </div>
+    <div class="container">
+      <div class="why-container">
+        <div class="fade-in">
+          <div class="section-overline">WHY AMP</div>
+          <h2 class="why-quote">We're not a generalist agency. We're the affiliate agency for <em>financial brands</em>.</h2>
+          <p class="why-body">Founded by Jessica Robinson — former Global Head of Affiliates at PayPal with 14+ years in performance marketing — AMP exists because affiliate programs for financial brands require a fundamentally different approach. Compliance-first partnerships. Quality-over-quantity publisher networks. Deep understanding of financial customer journeys and the regulatory frameworks that govern them. We chose to specialize so our clients don't have to explain their industry to their agency.</p>
+          <div class="why-founder">
+            <div class="why-founder-avatar">JR</div>
+            <div>
+              <div class="why-founder-name">Jessica Robinson</div>
+              <div class="why-founder-title">Founder &amp; CEO — Former Global Head of Affiliates, PayPal</div>
+            </div>
+          </div>
+        </div>
+        <div class="why-items">
+          <div class="why-item fade-in">
+            <div class="why-item-header">
+              <div class="why-item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
+              <div class="why-item-title">Financial Services Focus</div>
+            </div>
+            <div class="why-item-desc">We work exclusively with financial brands — fintech apps, banks, lenders, and financial institutions. No generalist guesswork — just deep category expertise and a network built for regulated industries.</div>
+          </div>
+          <div class="why-item fade-in fade-in-delay-1">
+            <div class="why-item-header">
+              <div class="why-item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg></div>
+              <div class="why-item-title">Senior-Led Accounts</div>
+            </div>
+            <div class="why-item-desc">Your program is managed by experienced strategists, not junior account managers. Direct access to the people making decisions about your channel.</div>
+          </div>
+          <div class="why-item fade-in fade-in-delay-2">
+            <div class="why-item-header">
+              <div class="why-item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg></div>
+              <div class="why-item-title">Network Partnerships</div>
+            </div>
+            <div class="why-item-desc">Established relationships across Impact, Everflow, and every major affiliate platform. We know which publishers drive funded accounts — not just clicks.</div>
+          </div>
+          <div class="why-item fade-in fade-in-delay-3">
+            <div class="why-item-header">
+              <div class="why-item-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" /></svg></div>
+              <div class="why-item-title">Transparent Reporting</div>
+            </div>
+            <div class="why-item-desc">Weekly dashboards with fintech-specific KPIs — funded accounts, approval rates, LTV, compliance flags. No black boxes, no vanity metrics.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publishers Bar -->
+  <section class="logo-bar on-dark">
+    <div class="container">
+      <div class="logo-bar-label fade-in">Publishers &amp; Networks We Work With</div>
+      <div class="logo-bar-logos fade-in fade-in-delay-1">
+        <!-- Replace with <img> tags when logos are available -->
+        <!-- UPDATE: Add your actual publisher/network partner names below -->
+        <span class="trust-name">Publisher 1</span>
+        <span class="trust-name">Publisher 2</span>
+        <span class="trust-name">Publisher 3</span>
+        <span class="trust-name">Publisher 4</span>
+        <span class="trust-name">Publisher 5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="section how-we-work" id="process">
+    <div class="container">
+      <div class="section-header fade-in" style="text-align:center">
+        <div class="section-overline on-light">OUR PROCESS</div>
+        <h2 class="section-heading">How We Build and Scale Affiliate Programs<br>for Financial Brands</h2>
+        <p class="section-sub" style="margin:0 auto">A proven four-phase framework refined across 14+ years of managing affiliate programs for fintech companies, banks, and financial institutions.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step fade-in">
+          <div class="process-number">01</div>
+          <h3 class="process-title">Diagnose</h3>
+          <p class="process-desc">We audit your existing affiliate program — evaluating partner quality, tracking infrastructure, compliance gaps, and revenue opportunity. You get a clear picture of where you stand and where the upside is.</p>
+        </div>
+        <div class="process-step fade-in fade-in-delay-1">
+          <div class="process-number">02</div>
+          <h3 class="process-title">Design</h3>
+          <p class="process-desc">We build a program strategy tailored to your business — commission structures, publisher targeting, compliance framework, and creative assets. Every decision grounded in what works for financial brands.</p>
+        </div>
+        <div class="process-step fade-in fade-in-delay-2">
+          <div class="process-number">03</div>
+          <h3 class="process-title">Launch &amp; Optimize</h3>
+          <p class="process-desc">We activate the program, recruit and onboard publishers, and begin optimizing in real time. Weekly performance reviews keep the program aligned with your growth targets and quality standards.</p>
+        </div>
+        <div class="process-step fade-in fade-in-delay-3">
+          <div class="process-number">04</div>
+          <h3 class="process-title">Scale &amp; Govern</h3>
+          <p class="process-desc">We expand into new partner categories, negotiate better terms, and build governance systems that protect brand integrity at scale. The goal: a channel that compounds over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-overline on-light">TESTIMONIALS</div>
+        <h2 class="section-heading">What Our Clients Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">AMP helped revamp our affiliate strategy for the long-term in the most effective way — by understanding our customers, our product, and our mission. Every week AMP continues to bring ideas toward growing our business while keeping it simple for FloatMe. AMP manages it all, and provides new partnerships, dashboards and analysis that keep us well-informed and growing.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KF</div>
+            <div><div class="testimonial-name">Kelly Furman</div><div class="testimonial-role">Head of Marketing, FloatMe</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in fade-in-delay-1">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">Partnering with AMP was a game-changer for Ryder Toys. They transformed our underutilized affiliate channel into a powerful acquisition engine, driving sustainable growth while maintaining efficiency. AMP truly operates as an extension of our team, and their expertise has been instrumental in strengthening our marketing ecosystem.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NS</div>
+            <div><div class="testimonial-name">Nick Steffenino</div><div class="testimonial-role">CEO, Ryder Toys</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header fade-in" style="text-align:center">
+        <div class="section-overline on-light">FAQ</div>
+        <h2 class="section-heading">Common Questions About<br>Affiliate Marketing for Financial Brands</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What types of financial companies does AMP work with?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">We work with fintech apps, digital lenders, neobanks, earned-wage access platforms, BNPL providers, and financial institutions that want to build or scale a performance affiliate program. Our clients range from growth-stage startups to established financial brands.</div></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How is AMP different from a generalist affiliate agency?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most affiliate agencies manage programs across dozens of verticals — retail, travel, SaaS, finance. We work exclusively with financial brands. That means we already know your compliance requirements, your publisher landscape, and the metrics that matter to your business — funded accounts, approval rates, LTV — not just clicks and impressions.</div></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does it take to see results from an affiliate program?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most clients see meaningful traction within 60–90 days of program launch or optimization. The timeline depends on whether we're building from scratch or improving an existing program. We provide weekly reporting from day one so you have full visibility into progress.</div></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you work with existing affiliate networks and tracking platforms?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. We have deep experience across Impact, Everflow, CJ, Awin, and other major platforms. We'll work within your existing infrastructure or recommend the right setup if you're starting fresh.</div></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What does "compliance-first" mean in affiliate marketing?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Financial services affiliate programs operate under strict regulatory requirements. We vet every publisher for compliance with financial advertising standards, monitor creative assets and claims, and build governance frameworks that protect your brand from regulatory risk. It's not an add-on — it's how we operate from day one.</div></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does it cost to work with AMP?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">We structure engagements based on program scope and complexity. Contact us for a free program audit — we'll assess your situation and provide a clear proposal.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="amp-squiggle cta-squiggle">
+      <img src="../amp-theme/assets/images/logos/amp_squiggle.png" alt="">
+    </div>
+    <div class="container">
+      <h2 class="cta-heading fade-in">Ready to see what a focused affiliate<br>program can do for your business?</h2>
+      <p class="cta-sub fade-in fade-in-delay-1">Get a free program audit from the team that lives and breathes affiliate marketing for financial brands.</p>
+      <a href="mailto:info@ampconsulting.co" class="btn btn-primary fade-in fade-in-delay-2">
+        Schedule a Free Program Audit
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../amp-theme/assets/images/logos/AMP White logo - no background.svg" alt="Affiliate Marketing Partners"></div>
+          <p class="footer-tagline">We build and scale performance affiliate programs for fintech brands and financial institutions that demand measurable, compliant growth.</p>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Company</h4>
+          <a href="#services">Services</a>
+          <a href="#results">Case Studies</a>
+          <a href="#about">About</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Services</h4>
+          <a href="services-preview.html#affiliate-program-management">Affiliate Program Management</a>
+          <a href="services-preview.html#app-monetization">App Monetization</a>
+          <a href="services-preview.html#amp-partner-network">AMP Partner Network</a>
+          <a href="services-preview.html#reporting-analytics">Reporting & Analytics</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Connect</h4>
+          <a href="mailto:info@ampconsulting.co">info@ampconsulting.co</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 Affiliate Marketing Partners. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var progressBar = document.getElementById('scrollProgress');
+    function updateProgress() {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+    }
+
+    var nav = document.getElementById('nav');
+    function updateNav() {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }
+
+    var navToggle = document.getElementById('navToggle');
+    var mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    function closeMobile() {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+
+    function animateCounter(el) {
+      var target = parseInt(el.dataset.target);
+      var prefix = el.dataset.prefix || '';
+      var suffix = el.dataset.suffix || '';
+      var duration = 2000;
+      var startTime = performance.now();
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+      function update(currentTime) {
+        var elapsed = currentTime - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        el.textContent = prefix + Math.round(easeOutCubic(progress) * target) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.metric-number[data-target]').forEach(animateCounter);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    var heroMetrics = document.querySelector('.hero-metrics');
+    if (heroMetrics) counterObserver.observe(heroMetrics);
+
+    function toggleFaq(btn) {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item.active').forEach(function(openItem) {
+        openItem.classList.remove('active');
+        openItem.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          updateProgress();
+          updateNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    updateProgress();
+    updateNav();
+  </script>
+</body>
+</html>

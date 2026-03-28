@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMP Hero — Squiggle Animation Prototype v5 (Stroke-Based)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy-dark: #0D1219;
+  --navy: #192333;
+  --marigold: #F5A623;
+  --marigold-bright: #FFB000;
+  --marigold-glow: rgba(245, 166, 35, 0.12);
+  --white: #FFFFFF;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --container: 1200px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0F172A;
+  background: var(--navy-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(ellipse 80% 50% at 65% 20%, rgba(245, 166, 35, 0.04) 0%, transparent 100%),
+    radial-gradient(ellipse 50% 70% at 15% 80%, rgba(30, 42, 58, 0.3) 0%, transparent 100%),
+    linear-gradient(180deg, #0D1219 0%, #131B26 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-h1 {
+  font-size: clamp(40px, 5vw, 58px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.hero-h1 em {
+  color: var(--marigold);
+  font-style: normal;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 15px 30px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--marigold);
+  color: var(--navy-dark);
+}
+
+.btn-primary:hover {
+  background: #E09400;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--marigold-glow);
+}
+
+/* ===== SQUIGGLE ===== */
+.hero-squiggle-svg {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateY(-50%);
+  height: 88%;
+  width: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 20px rgba(245, 166, 35, 0.12));
+}
+
+#squigglePath {
+  stroke-dasharray: var(--path-length);
+  stroke-dashoffset: var(--path-length);
+  animation: drawSquiggle 5.6s cubic-bezier(0.05, 0.0, 0.35, 1.0) 0.8s forwards;
+}
+
+#logoOverlay {
+  display: none;
+  opacity: 0.3;
+}
+
+@keyframes drawSquiggle {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ===== METRICS BAR ===== */
+.metrics-bar {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.metrics-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 28px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.metric-card:hover {
+  border-color: rgba(245, 166, 35, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.metric-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--marigold);
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+
+/* ===== CONTROLS ===== */
+.proto-controls {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.proto-controls button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(13, 18, 25, 0.92);
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+.proto-controls button:hover {
+  border-color: var(--marigold);
+  color: var(--marigold);
+}
+
+.proto-controls .speed-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  padding: 0 6px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-container { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-squiggle-svg { height: 65%; opacity: 0.5; left: 35%; }
+  .metrics-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: auto; padding: 140px 0 80px; }
+  .hero-h1 { font-size: 34px; }
+  .hero-sub { font-size: 16px; }
+  .hero-squiggle-svg { height: 50%; opacity: 0.3; left: 25%; }
+  .metrics-container { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .metric-number { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <svg class="hero-squiggle-svg" viewBox="-1 4 97 92" preserveAspectRatio="xMinYMid meet">
+    <!-- Single stroked centerline path — IS the visible shape + the animation target -->
+    <path id="squigglePath"
+      fill="none"
+      stroke="#F5A623"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M 8.5 49
+         Q 11 49 13.5 42
+         A 2 2 0 0 1 17.5 42
+         L 17.5 58
+         A 2.4 2.4 0 0 0 22.3 58
+         L 22.3 33
+         A 3.2 3.2 0 0 1 28.7 33
+         L 28.7 66
+         A 4.4 4.4 0 0 0 37.5 66
+         L 37.5 25
+         A 5.2 5.2 0 0 1 47.9 25
+         L 47.9 75
+         A 5.5 5.5 0 0 0 58.9 75
+         L 58.9 18
+         A 7.5 7.5 0 0 1 73.9 18
+         L 73.9 82
+         A 8.2 8.2 0 0 0 90.3 82
+         L 90.3 48"/>
+
+    <!-- Hidden: original logo path for visual comparison (toggle with Compare button) -->
+    <path id="logoOverlay" fill="red"
+      d="M82.1,91.7c-5.3,0-9.7-4.3-9.7-9.7V17.6c0-3.3-2.7-6-6-6c-3.3,0-6,2.7-6,6v57.1c0,3.9-3.1,7-7,7
+         c-3.9,0-7-3.1-7-7v-50c0-2-1.6-3.7-3.7-3.7c-2,0-3.7,1.6-3.7,3.7v41.2c0,3.2-2.6,5.9-5.9,5.9s-5.9-2.6-5.9-5.9v-33
+         c0-0.9-0.7-1.7-1.7-1.7c-0.9,0-1.7,0.7-1.7,1.7v24.8c0,2.1-1.7,3.9-3.9,3.9s-3.9-1.7-3.9-3.9v-16
+         c0-0.3-0.2-0.5-0.5-0.5c-0.3,0-0.5,0.2-0.5,0.5v3.8c0,2.8-2.3,5-5,5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5
+         c1.1,0,2-0.9,2-2v-3.8c0-1.9,1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5v16c0,0.5,0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9V32.8
+         c0-2.6,2.1-4.7,4.7-4.7c2.6,0,4.7,2.1,4.7,4.7v33c0,1.6,1.3,2.9,2.9,2.9c1.6,0,2.9-1.3,2.9-2.9V24.6
+         c0-3.7,3-6.7,6.7-6.7c3.7,0,6.7,3,6.7,6.7v50c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4V17.6c0-5,4-9,9-9s9,4,9,9V82
+         c0,3.7,3,6.7,6.7,6.7s6.7-3,6.7-6.7V48.2c0-0.8,0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5V82
+         C91.8,87.3,87.4,91.7,82.1,91.7z"/>
+  </svg>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-h1">The Affiliate Agency for<br><em>Financial Brands</em></h1>
+      <p class="hero-sub">We build and manage performance affiliate programs for fintech brands and financial institutions that require measurable, compliant growth.</p>
+      <a href="#" class="btn btn-primary">
+        Get in Touch
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+      </a>
+    </div>
+    <div class="hero-right"></div>
+  </div>
+</section>
+
+<!-- METRICS BAR -->
+<section class="metrics-bar">
+  <div class="metrics-container">
+    <div class="metric-card">
+      <div class="metric-number">122%</div>
+      <div class="metric-label">Average Revenue Growth</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">500+</div>
+      <div class="metric-label">Publisher Contacts</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">75k+</div>
+      <div class="metric-label">New Monthly Users</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">15+ yrs</div>
+      <div class="metric-label">Industry Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTROLS -->
+<div class="proto-controls">
+  <button onclick="replayAnimation(5.6)">Replay</button>
+  <button onclick="replayAnimation(3.5)">Faster</button>
+  <button onclick="replayAnimation(8)">Slower</button>
+  <span class="speed-label" id="speedLabel">5.6s</span>
+  <button id="compareBtn" onclick="toggleCompare()">Compare</button>
+</div>
+
+<script>
+(function() {
+  var path = document.getElementById('squigglePath');
+  if (path) {
+    var length = path.getTotalLength();
+    path.style.setProperty('--path-length', length);
+  }
+})();
+
+function replayAnimation(duration) {
+  var path = document.getElementById('squigglePath');
+  var label = document.getElementById('speedLabel');
+  label.textContent = duration + 's';
+
+  path.style.animation = 'none';
+  void path.offsetWidth;
+
+  path.style.animation =
+    'drawSquiggle ' + duration + 's cubic-bezier(0.05, 0.0, 0.35, 1.0) 0.3s forwards';
+}
+
+function toggleCompare() {
+  var overlay = document.getElementById('logoOverlay');
+  var btn = document.getElementById('compareBtn');
+  if (overlay.style.display === 'block') {
+    overlay.style.display = 'none';
+    btn.textContent = 'Compare';
+  } else {
+    overlay.style.display = 'block';
+    btn.textContent = 'Hide Compare';
+  }
+}
+</script>
+
+</body>
+</html>

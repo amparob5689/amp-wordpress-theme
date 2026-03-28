@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiliate Services for Financial Brands | AMP</title>
+  <meta name="description" content="AMP provides four specialized affiliate services for financial brands: program management, app monetization, partner network access, and reporting & analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-dark: #0D1219;
+      --navy: #192333;
+      --navy-mid: #1E2A3A;
+      --marigold: #F5A623;
+      --marigold-bright: #FFB000;
+      --marigold-hover: #E09400;
+      --marigold-glow: rgba(245, 166, 35, 0.12);
+      --cream: #F7F8FA;
+      --white: #FFFFFF;
+      --slate: #5E6E82;
+      --slate-light: #8896A7;
+      --text: #0F172A;
+      --text-secondary: #3B4A5E;
+      --border: #E4E7EC;
+      --border-light: #EEF0F4;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 1px 3px rgba(0,0,0,0.03), 0 4px 16px rgba(0,0,0,0.03);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.07);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --container: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.15; letter-spacing: -0.02em; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    .section { padding: 100px 0; }
+
+    /* ===== AMP SQUIGGLE ===== */
+    .amp-squiggle { position: absolute; pointer-events: none; z-index: 0; }
+    .amp-squiggle img { width: 100%; height: 100%; object-fit: contain; filter: blur(1.5px); }
+
+    /* ===== SCROLL PROGRESS ===== */
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--marigold); z-index: 1001; width: 0; transition: width 0.1s linear; }
+
+    /* ===== NAV ===== */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 0; transition: all var(--transition); }
+    .nav.scrolled { background: rgba(13, 18, 25, 0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 14px 0; box-shadow: 0 1px 20px rgba(0,0,0,0.2); }
+    .nav-container { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 48px; width: auto; transition: height 0.3s ease; }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); transition: color var(--transition); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--marigold); color: var(--navy-dark) !important; padding: 10px 22px; border-radius: 100px; font-weight: 600 !important; transition: all var(--transition) !important; }
+    .nav-cta:hover { background: var(--marigold-hover); transform: translateY(-1px); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { width: 24px; height: 2px; background: var(--white); transition: all var(--transition); border-radius: 2px; }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-dark); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+    .mobile-menu.active { display: flex; }
+    .mobile-menu a { font-size: 20px; color: var(--white); font-weight: 600; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav.scrolled .nav-logo img { height: 32px; }
+    }
+
+    /* ===== SERVICES HERO ===== */
+    .services-hero {
+      padding: 160px 0 80px;
+      background:
+        radial-gradient(ellipse 80% 50% at 65% 20%, rgba(245, 166, 35, 0.04) 0%, transparent 100%),
+        linear-gradient(180deg, #0D1219 0%, #131B26 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .services-hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .services-hero h1 em {
+      color: var(--marigold);
+      font-style: normal;
+    }
+
+    .services-hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    .hero-jump-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-jump-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      padding: 10px 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 100px;
+      transition: all var(--transition);
+    }
+
+    .hero-jump-links a:hover {
+      color: var(--marigold);
+      border-color: var(--marigold);
+    }
+
+    /* ===== STICKY SUB-NAV ===== */
+    .sub-nav {
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow var(--transition);
+    }
+
+    .sub-nav.shadowed {
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .sub-nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .sub-nav-inner::-webkit-scrollbar { display: none; }
+
+    .sub-nav-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate);
+      padding: 18px 24px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all var(--transition);
+    }
+
+    .sub-nav-link:hover {
+      color: var(--text);
+    }
+
+    .sub-nav-link.active {
+      color: var(--marigold);
+      border-bottom-color: var(--marigold);
+    }
+
+    /* ===== SERVICE SECTION ===== */
+    .service-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-section:nth-child(odd) {
+      background: var(--white);
+    }
+
+    .service-section:nth-child(even) {
+      background: var(--cream);
+    }
+
+    .service-section.dark {
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(245, 166, 35, 0.03) 0%, transparent 100%),
+        linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
+    }
+
+    .service-overline {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--marigold);
+      margin-bottom: 16px;
+    }
+
+    .service-section.dark .service-overline {
+      color: var(--marigold);
+    }
+
+    .service-h2 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .service-section.dark .service-h2 {
+      color: var(--white);
+    }
+
+    .service-intro {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 720px;
+      margin-bottom: 56px;
+    }
+
+    .service-section.dark .service-intro {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .service-layout.reversed {
+      direction: rtl;
+    }
+
+    .service-layout.reversed > * {
+      direction: ltr;
+    }
+
+    /* ===== IS THIS FOR YOU ===== */
+    .fit-box {
+      background: var(--cream);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+
+    .service-section.dark .fit-box {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .fit-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .service-section.dark .fit-box h3 {
+      color: var(--white);
+    }
+
+    .fit-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .fit-box li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .service-section.dark .fit-box li {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .fit-box li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--marigold);
+      opacity: 0.7;
+    }
+
+    /* ===== WHAT WE DO CARDS ===== */
+    .wwd-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .wwd-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: all var(--transition);
+    }
+
+    .wwd-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .service-section.dark .wwd-card {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .service-section.dark .wwd-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .wwd-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .service-section.dark .wwd-card h4 {
+      color: var(--white);
+    }
+
+    .wwd-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .service-section.dark .wwd-card p {
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ===== RESULTS CALLOUT ===== */
+    .results-callout {
+      margin-top: 48px;
+      padding: 32px 36px;
+      background: var(--marigold-glow);
+      border-left: 3px solid var(--marigold);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .service-section.dark .results-callout {
+      background: rgba(245, 166, 35, 0.08);
+    }
+
+    .results-callout h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--marigold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .results-callout li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .service-section.dark .results-callout li {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .results-callout ul { list-style: none; }
+
+    .results-callout li::before {
+      content: '→ ';
+      color: var(--marigold);
+      font-weight: 600;
+    }
+
+    /* ===== SERVICE CTA ===== */
+    .service-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 32px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--marigold);
+      transition: all var(--transition);
+    }
+
+    .service-cta:hover { gap: 12px; }
+    .service-cta svg { width: 18px; height: 18px; }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .faq-heading {
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+
+    .faq-item.active { border-color: var(--marigold); }
+
+    .faq-question {
+      width: 100%;
+      padding: 22px 28px;
+      background: none;
+      border: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--slate-light);
+      transition: transform var(--transition), color var(--transition);
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+      color: var(--marigold);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 28px 22px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: var(--navy-dark);
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245,166,35,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-heading {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; padding: 16px 32px; border-radius: 100px; transition: all var(--transition); border: none; cursor: pointer; }
+    .btn-primary { background: var(--marigold); color: var(--navy-dark); }
+    .btn-primary:hover { background: var(--marigold-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,0.25); }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* ===== FOOTER ===== */
+    .footer { background: var(--navy-dark); padding: 64px 0 32px; }
+    .footer-container { display: flex; justify-content: space-between; gap: 48px; padding-bottom: 32px; }
+    .footer-brand { max-width: 280px; }
+    .footer-logo { margin-bottom: 14px; }
+    .footer-logo img { height: 80px; width: auto; }
+    .footer-tagline { font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.7; }
+    .footer-nav-group h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.50); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 18px; }
+    .footer-nav-group a { display: block; font-size: 14px; color: rgba(255,255,255,0.35); padding: 5px 0; transition: color var(--transition); }
+    .footer-nav-group a:hover { color: var(--marigold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.25); }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .service-layout { grid-template-columns: 1fr; gap: 48px; }
+      .service-layout.reversed { direction: ltr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+      .services-hero { padding: 140px 0 60px; }
+      .services-hero h1 { font-size: 34px; }
+      .services-hero-sub { font-size: 16px; }
+      .service-section { padding: 72px 0; }
+      .service-h2 { font-size: 28px; }
+      .faq-heading { font-size: 28px; }
+      .cta-heading { font-size: 28px; }
+      .sub-nav { top: 60px; }
+      .sub-nav-link { padding: 14px 18px; font-size: 13px; }
+      .footer-container { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-jump-links { flex-direction: column; align-items: center; }
+      .hero-jump-links a { width: 100%; text-align: center; max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="homepage-preview.html" class="nav-logo"><img src="../amp-theme/assets/images/logos/AMP White logo - no background.svg" alt="Affiliate Marketing Partners"></a>
+      <div class="nav-links">
+        <a href="homepage-preview.html#services">Services</a>
+        <a href="homepage-preview.html#results">Results</a>
+        <a href="homepage-preview.html#about">About</a>
+        <a href="homepage-preview.html#contact">Contact</a>
+        <a href="homepage-preview.html#contact" class="nav-cta">Schedule an Audit</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="homepage-preview.html#services" onclick="closeMobile()">Services</a>
+    <a href="homepage-preview.html#results" onclick="closeMobile()">Results</a>
+    <a href="homepage-preview.html#about" onclick="closeMobile()">About</a>
+    <a href="homepage-preview.html#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- Services Hero -->
+  <section class="services-hero">
+    <div class="amp-squiggle" style="top:-12%;right:-4%;width:420px;height:500px;opacity:0.07;transform:scaleX(-1);">
+      <img src="../amp-theme/assets/images/logos/amp_squiggle.png" alt="">
+    </div>
+    <div class="container">
+      <h1 class="fade-in">Affiliate Services for<br><em>Financial Brands</em></h1>
+      <p class="services-hero-sub fade-in fade-in-delay-1">Four specialized capabilities for fintech companies, banks, lenders, and financial institutions that need their affiliate channel managed with expertise, precision, and regulatory awareness.</p>
+      <div class="hero-jump-links fade-in fade-in-delay-2">
+        <a href="#affiliate-program-management">Program Management</a>
+        <a href="#app-monetization">App Monetization</a>
+        <a href="#amp-partner-network">Partner Network</a>
+        <a href="#reporting-analytics">Reporting & Analytics</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Sub-Nav -->
+  <div class="sub-nav" id="subNav">
+    <div class="sub-nav-inner">
+      <a href="#affiliate-program-management" class="sub-nav-link active" data-section="affiliate-program-management">Program Management</a>
+      <a href="#app-monetization" class="sub-nav-link" data-section="app-monetization">App Monetization</a>
+      <a href="#amp-partner-network" class="sub-nav-link" data-section="amp-partner-network">Partner Network</a>
+      <a href="#reporting-analytics" class="sub-nav-link" data-section="reporting-analytics">Reporting & Analytics</a>
+    </div>
+  </div>
+
+  <!-- SERVICE 01: Affiliate Program Management -->
+  <section class="service-section" id="affiliate-program-management">
+    <div class="container">
+      <div class="service-overline fade-in">SERVICE 01</div>
+      <h2 class="service-h2 fade-in">Affiliate Program Management for Fintech & Financial Services</h2>
+      <p class="service-intro fade-in fade-in-delay-1">Affiliate Marketing Partners provides full-service affiliate program management for fintech companies and financial institutions. We handle strategy, publisher recruitment, compliance oversight, optimization, and reporting — so your team can focus on product and growth while we build the affiliate channel into a predictable, high-quality acquisition engine.</p>
+
+      <div class="service-layout">
+        <div>
+          <div class="fit-box fade-in">
+            <h3>Is This for You?</h3>
+            <ul>
+              <li>Have an affiliate program that's underperforming or unmanaged</li>
+              <li>Want to launch an affiliate channel but lack internal expertise</li>
+              <li>Need an agency partner that understands financial compliance and publisher quality</li>
+              <li>Are tired of generalist agencies that treat finance like any other vertical</li>
+            </ul>
+          </div>
+
+          <div class="results-callout fade-in fade-in-delay-1">
+            <h3>Results You Can Expect</h3>
+            <ul>
+              <li>FloatMe: +241% YoY affiliate revenue, +540% partner growth</li>
+            </ul>
+          </div>
+
+          <a href="homepage-preview.html#contact" class="service-cta fade-in fade-in-delay-2">Get a Free Program Audit <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+
+        <div class="wwd-grid">
+          <div class="wwd-card fade-in">
+            <h4>Program Strategy & Architecture</h4>
+            <p>Commission structures, publisher tiers, and tracking setup designed for fintech KPIs — funded accounts, approval rates, LTV.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-1">
+            <h4>Publisher Recruitment & Vetting</h4>
+            <p>We source and qualify finance-focused affiliates, content publishers, and influencers from our established network.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-2">
+            <h4>Compliance Governance</h4>
+            <p>Every publisher and creative asset is reviewed against financial advertising standards before going live.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-3">
+            <h4>Ongoing Optimization</h4>
+            <p>Weekly performance reviews, A/B testing of offers and creatives, publisher pruning, and commission adjustments based on quality metrics.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-4">
+            <h4>Platform Management</h4>
+            <p>Full administration of your affiliate platform (Impact, Everflow, CJ, or others), including tracking, attribution, and payment workflows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 02: App Monetization -->
+  <section class="service-section dark" id="app-monetization">
+    <div class="amp-squiggle" style="bottom:-25%;right:-8%;width:500px;height:600px;opacity:0.055;transform:rotate(180deg);">
+      <img src="../amp-theme/assets/images/logos/amp_squiggle.png" alt="">
+    </div>
+    <div class="container">
+      <div class="service-overline fade-in">SERVICE 02</div>
+      <h2 class="service-h2 fade-in">Fintech App Monetization Through Embedded Partner Offers</h2>
+      <p class="service-intro fade-in fade-in-delay-1">AMP designs and manages embedded partner offer experiences inside fintech apps. We curate advertisers that align with your users, your brand standards, and your compliance requirements — turning your engaged user base into incremental revenue without compromising the product experience your customers rely on.</p>
+
+      <div class="service-layout reversed">
+        <div>
+          <div class="fit-box fade-in">
+            <h3>Is This for You?</h3>
+            <ul>
+              <li>Have an engaged user base and want to generate revenue beyond your core product</li>
+              <li>Are concerned about maintaining UX quality and brand trust with third-party offers</li>
+              <li>Need help sourcing, vetting, and managing advertiser partnerships at scale</li>
+              <li>Want to understand the LTV and retention impact of embedded offers with rigorous analytics</li>
+            </ul>
+          </div>
+
+          <div class="results-callout fade-in fade-in-delay-1">
+            <h3>Results You Can Expect</h3>
+            <ul>
+              <li>FloatMe: grew marketplace from a handful of advertisers to 30+ curated partners, generating $1M+ in marketplace revenue</li>
+              <li>Measurable LTV improvement with maintained or improved user satisfaction scores</li>
+            </ul>
+          </div>
+
+          <a href="homepage-preview.html#contact" class="service-cta fade-in fade-in-delay-2">Explore App Monetization <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+
+        <div class="wwd-grid">
+          <div class="wwd-card fade-in">
+            <h4>Marketplace Strategy</h4>
+            <p>We assess your user demographics, app experience, and monetization goals to design an offer marketplace that fits naturally into your product.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-1">
+            <h4>Partner Sourcing & Curation</h4>
+            <p>We recruit and vet advertisers that are relevant to your users, brand-safe, and compliant with financial regulations.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-2">
+            <h4>Placement Optimization</h4>
+            <p>A/B testing of offer placements, creative formats, and targeting rules to maximize conversion without disrupting engagement or retention.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-3">
+            <h4>Revenue Analytics</h4>
+            <p>We measure impact at the cohort level — ARPU, LTV, retention curves, and user satisfaction — so you can make informed decisions about the program.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-4">
+            <h4>Compliance Monitoring</h4>
+            <p>Every advertiser and offer is screened for regulatory compliance and brand alignment on an ongoing basis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 03: AMP Partner Network -->
+  <section class="service-section" id="amp-partner-network">
+    <div class="container">
+      <div class="service-overline fade-in">SERVICE 03</div>
+      <h2 class="service-h2 fade-in">AMP Partner Network — Affiliate Partnerships Without Full Management</h2>
+      <p class="service-intro fade-in fade-in-delay-1">Not every brand needs a fully managed affiliate program. The AMP Partner Network gives fintech apps and finance publishers direct access to our curated marketplace of vetted, high-converting financial brand partnerships — without the overhead of a managed engagement. Whether you're a fintech app looking to monetize through partner offers or a finance publisher seeking quality advertisers, the AMP Partner Network connects you to the right partners faster.</p>
+
+      <div class="service-layout">
+        <div>
+          <div class="fit-box fade-in">
+            <h3>Is This for You?</h3>
+            <ul>
+              <li>Are a fintech app with an engaged user base looking for monetization partnerships</li>
+              <li>Are a finance publisher seeking vetted, high-quality financial brand advertisers</li>
+              <li>Want access to pre-negotiated partnership terms without running a full affiliate program</li>
+              <li>Have internal resources to manage partnerships but need help sourcing the right ones</li>
+              <li>Are exploring affiliate as a channel and want to start lean before committing to full management</li>
+            </ul>
+          </div>
+
+          <div class="results-callout fade-in fade-in-delay-1">
+            <h3>Results You Can Expect</h3>
+            <ul>
+              <li>Access to 50+ pre-vetted financial brand partnerships</li>
+              <li>Faster time-to-revenue: most partners go live within 2–4 weeks of joining</li>
+              <li>Lower cost of entry — ideal for early-stage fintech companies testing the affiliate channel</li>
+            </ul>
+          </div>
+
+          <a href="homepage-preview.html#contact" class="service-cta fade-in fade-in-delay-2">Join the Network <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+
+        <div class="wwd-grid">
+          <div class="wwd-card fade-in">
+            <h4>Curated Partner Matching</h4>
+            <p>We connect you with partners from our established network of financial brands, fintech apps, and finance-focused publishers — all pre-vetted for quality and compliance.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-1">
+            <h4>Pre-Negotiated Terms</h4>
+            <p>Access partnership structures and commission frameworks already optimized for financial products, saving months of negotiation.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-2">
+            <h4>Compliance-Ready Partners</h4>
+            <p>Every partner in the network has been screened against financial advertising standards, reducing your regulatory risk from day one.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-3">
+            <h4>Self-Serve Flexibility</h4>
+            <p>You manage the day-to-day relationships while we provide the network infrastructure, partner introductions, and ongoing quality oversight.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-4">
+            <h4>Upgrade Path</h4>
+            <p>When you're ready to scale, transition seamlessly into our full Affiliate Program Management service with all your partnership data and history intact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 04: Reporting & Analytics -->
+  <section class="service-section dark" id="reporting-analytics">
+    <div class="container">
+      <div class="service-overline fade-in">SERVICE 04</div>
+      <h2 class="service-h2 fade-in">Affiliate Reporting & Analytics for Financial Brands</h2>
+      <p class="service-intro fade-in fade-in-delay-1">Most affiliate reporting stops at clicks, impressions, and conversions. For fintech and financial services companies, that's not enough. AMP provides centralized reporting with fintech-specific metrics — funded accounts, approval rates, LTV, default risk, and compliance flags — giving your leadership team the confidence to invest in the affiliate channel.</p>
+
+      <div class="service-layout reversed">
+        <div>
+          <div class="fit-box fade-in">
+            <h3>Is This for You?</h3>
+            <ul>
+              <li>Have affiliate data fragmented across multiple networks and platforms</li>
+              <li>Need to tie affiliate performance to downstream financial KPIs (funded loans, card activations, portfolio quality)</li>
+              <li>Want proactive insights and recommendations, not just dashboards</li>
+              <li>Need to communicate affiliate channel performance to executive leadership, boards, or regulators</li>
+            </ul>
+          </div>
+
+          <div class="results-callout fade-in fade-in-delay-1">
+            <h3>Results You Can Expect</h3>
+            <ul>
+              <li>Clients report 40–60% faster decision-making on affiliate budget allocation</li>
+              <li>Full visibility into which publishers drive real financial outcomes vs. vanity metrics</li>
+              <li>Compliance-ready documentation for regulatory audits</li>
+            </ul>
+          </div>
+
+          <a href="homepage-preview.html#contact" class="service-cta fade-in fade-in-delay-2">Request a Reporting Demo <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></a>
+        </div>
+
+        <div class="wwd-grid">
+          <div class="wwd-card fade-in">
+            <h4>Centralized Dashboards</h4>
+            <p>We aggregate data from all your affiliate sources into a single reporting layer with real-time visibility.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-1">
+            <h4>Fintech-Specific KPIs</h4>
+            <p>We track what matters: funded accounts, approval rates, charge-off rates, LTV by publisher, customer acquisition cost by partner tier.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-2">
+            <h4>Quality & Compliance Monitoring</h4>
+            <p>Automated flagging of suspicious traffic, non-compliant creatives, and publishers that don't meet your quality standards.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-3">
+            <h4>Weekly Insights & Recommendations</h4>
+            <p>Not just data — we deliver analysis with clear actions: which publishers to scale, which to prune, where to adjust commissions.</p>
+          </div>
+          <div class="wwd-card fade-in fade-in-delay-4">
+            <h4>Executive-Ready Reporting</h4>
+            <p>Formatted for leadership reviews, board decks, and regulatory inquiries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services FAQ -->
+  <section class="faq-section" id="services-faq">
+    <div class="container">
+      <h2 class="faq-heading fade-in">Frequently Asked Questions</h2>
+      <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+        <div class="faq-item fade-in" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+            How do you find and vet fintech affiliate partners?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="faq-answer-inner" itemprop="text">We maintain an established network of finance-focused publishers, content sites, and influencers built over 14+ years in the industry. Every potential partner is vetted for content quality, audience relevance, compliance with financial advertising standards, and traffic legitimacy before they're approved for your program.</div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+            What KPIs do you optimize for in fintech affiliate programs?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="faq-answer-inner" itemprop="text">We optimize for the metrics that drive your business — funded accounts, approval rates, customer LTV, and revenue per partner — not vanity metrics like raw clicks or impressions. Every program has a custom KPI framework aligned to your specific financial product and growth targets.</div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+            Can you work with our existing networks and tracking platforms?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="faq-answer-inner" itemprop="text">Yes. We have deep operational experience across Impact, Everflow, CJ, Awin, ShareASale, and others. We'll work within your current infrastructure or recommend the right platform if you're starting from scratch.</div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+            How do you ensure embedded offers don't harm our app's user experience?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="faq-answer-inner" itemprop="text">Every offer placement is tested against engagement and retention baselines. We use cohort analysis to measure whether offers improve, maintain, or degrade user satisfaction metrics. If an offer or placement underperforms, we adjust or remove it. The product experience always comes first.</div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in fade-in-delay-4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+            What does your compliance governance process look like?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="faq-answer-inner" itemprop="text">We review every publisher, creative asset, and landing page against financial advertising regulations and your brand guidelines before activation. Ongoing monitoring catches issues in real time. We maintain documentation for every compliance decision — essential for financial brands that face regulatory scrutiny.</div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+            How long does a typical engagement last?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          </button>
+          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="faq-answer-inner" itemprop="text">Most clients engage on a 6–12 month basis with ongoing monthly retainers. Affiliate programs are long-term assets — they compound over time as publisher relationships mature and optimization data accumulates. We structure engagements to reflect that.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="contact">
+    <div class="amp-squiggle" style="bottom:-20%;left:-10%;width:600px;height:720px;opacity:0.06;transform:rotate(180deg);">
+      <img src="../amp-theme/assets/images/logos/amp_squiggle.png" alt="">
+    </div>
+    <div class="container">
+      <h2 class="cta-heading fade-in">Ready to see what a focused affiliate<br>program can do for your business?</h2>
+      <p class="cta-sub fade-in fade-in-delay-1">Get a free program audit from the team that lives and breathes affiliate marketing for financial brands.</p>
+      <a href="mailto:info@ampconsulting.co" class="btn btn-primary fade-in fade-in-delay-2">
+        Schedule a Free Program Audit <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../amp-theme/assets/images/logos/AMP White logo - no background.svg" alt="Affiliate Marketing Partners"></div>
+          <p class="footer-tagline">We build and scale performance affiliate programs for fintech brands and financial institutions that demand measurable, compliant growth.</p>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Company</h4>
+          <a href="homepage-preview.html#services">Services</a>
+          <a href="homepage-preview.html#results">Case Studies</a>
+          <a href="homepage-preview.html#about">About</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Services</h4>
+          <a href="#affiliate-program-management">Affiliate Program Management</a>
+          <a href="#app-monetization">App Monetization</a>
+          <a href="#amp-partner-network">AMP Partner Network</a>
+          <a href="#reporting-analytics">Reporting & Analytics</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Connect</h4>
+          <a href="mailto:info@ampconsulting.co">info@ampconsulting.co</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 Affiliate Marketing Partners. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var progressBar = document.getElementById('scrollProgress');
+    function updateProgress() {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+    }
+
+    var nav = document.getElementById('nav');
+    function updateNav() {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }
+
+    var navToggle = document.getElementById('navToggle');
+    var mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    function closeMobile() {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+
+    function toggleFaq(btn) {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item.active').forEach(function(openItem) {
+        openItem.classList.remove('active');
+        openItem.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+
+    // Sticky sub-nav active state
+    var subNavLinks = document.querySelectorAll('.sub-nav-link');
+    var serviceSections = document.querySelectorAll('.service-section');
+
+    var sectionObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          subNavLinks.forEach(function(link) { link.classList.remove('active'); });
+          var activeLink = document.querySelector('.sub-nav-link[data-section="' + entry.target.id + '"]');
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '-100px 0px -50% 0px' });
+
+    serviceSections.forEach(function(section) {
+      sectionObserver.observe(section);
+    });
+
+    // Sub-nav shadow on scroll
+    var subNav = document.getElementById('subNav');
+    function updateSubNav() {
+      subNav.classList.toggle('shadowed', window.scrollY > 400);
+    }
+
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          updateProgress();
+          updateNav();
+          updateSubNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    updateProgress();
+    updateNav();
+    updateSubNav();
+  </script>
+</body>
+</html>
