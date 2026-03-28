@@ -46,6 +46,14 @@ function amp_theme_setup() {
 }
 add_action( 'after_setup_theme', 'amp_theme_setup' );
 
+function amp_theme_home_title( $title ) {
+	if ( is_front_page() ) {
+		unset( $title['title'] );
+	}
+	return $title;
+}
+add_filter( 'document_title_parts', 'amp_theme_home_title' );
+
 function amp_theme_favicon() {
 	echo '<link rel="icon" href="' . esc_url( get_template_directory_uri() . '/assets/images/favicon.svg' ) . '" type="image/svg+xml">';
 }
