@@ -269,7 +269,7 @@ add_action( 'init', 'amp_theme_auto_setup_pages' );
  * Auto-create seed case studies so the site isn't empty out of the box.
  */
 function amp_theme_seed_case_studies() {
-	$seed_version = 3;
+	$seed_version = 4;
 	if ( (int) get_option( 'amp_theme_case_studies_version', 0 ) >= $seed_version ) {
 		return;
 	}
@@ -285,7 +285,7 @@ function amp_theme_seed_case_studies() {
 <h2>Solution</h2>
 <p>AMP was quickly onboarded and expanded FloatMe\'s partner set by aligning with advertisers that were a fit with the FloatMe members\' need to earn money, save money or better manage their money. AMP also worked closely with FloatMe\'s Marketing and Product teams to redesign the offer presentation within the app, add in new placement opportunities and create new avenues of promoting these advertisers to the FloatMe user base.</p>',
 			'meta'     => array(
-				'client_name'     => 'FloatMe',
+				'client_name'     => 'FloatMe Marketplace',
 				'client_industry' => 'Financial App / Fintech',
 				'metric_1_value'  => '+241%',
 				'metric_1_label'  => 'YoY Revenue',

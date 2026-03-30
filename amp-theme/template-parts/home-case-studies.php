@@ -1,7 +1,7 @@
 <?php
 /**
  * Homepage — Case studies / results section.
- * Dynamically queries the case_study CPT. Falls back to hardcoded FloatMe if no posts exist yet.
+ * Dynamically queries the case_study CPT. Falls back to hardcoded FloatMe Marketplace if no posts exist yet.
  *
  * @package AMP_Theme
  */
@@ -56,11 +56,11 @@ $case_studies = new WP_Query( array(
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
       <?php else : ?>
-        <!-- Fallback: hardcoded FloatMe until case studies are entered in WP Admin -->
+        <!-- Fallback: hardcoded FloatMe Marketplace until case studies are entered in WP Admin -->
         <div class="case-card fade-in">
           <div class="case-card-accent"></div>
           <div class="case-card-body">
-            <div class="case-client">FloatMe</div>
+            <div class="case-client">FloatMe Marketplace</div>
             <div class="case-metrics">
               <div><div class="case-metric-value">+241%</div><div class="case-metric-label">YoY Revenue</div></div>
               <div><div class="case-metric-value">+88%</div><div class="case-metric-label">YoY EPC</div></div>
