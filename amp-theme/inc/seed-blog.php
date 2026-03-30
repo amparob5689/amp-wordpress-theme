@@ -10,12 +10,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function amp_theme_seed_blog_posts() {
-	$seed_version = 5;
+	$seed_version = 6;
 	if ( (int) get_option( 'amp_theme_blog_seed_version', 0 ) >= $seed_version ) {
 		return;
 	}
 
 	$posts = array(
+
+		array(
+			'title'    => 'My First 365 Days in Affiliate Marketing',
+			'slug'     => 'my-first-365-days-in-affiliate-marketing',
+			'date'     => '2026-03-30 10:00:00',
+			'author'   => 'Amy Park',
+			'category' => 'Employee Spotlight',
+			'excerpt'  => 'After seven years in commercial real estate, Amy Park pivoted to affiliate marketing at AMP. Here is what year one taught her about vocabulary, trust, and showing up in person.',
+			'content'  => '<h2>The Pivot I Didn&rsquo;t Plan</h2>
+
+<p>Switching to an entirely new industry after seven years in commercial real estate was never part of my plan. For nearly a decade, my vocabulary was limited to CAP rates, IRRs, and value-add properties. I loved my team and the fast-paced intensity of that world, but as I approached my 30s, I hit a bit of a &ldquo;quarter-life crisis.&rdquo; I realized that my entire identity revolved around work and I was ready for a life that was not just about the next deal.</p>
+
+<p>In true millennial fashion, I took a 2023 sabbatical to navigate a &ldquo;what&rsquo;s next?&rdquo; phase&mdash;traveling abroad, reconnecting with family, and supporting our family businesses. During that time, I began earning digital marketing certifications and testing those skills on the ground. Seeing firsthand the massive need for online marketing support in small businesses like my family&rsquo;s gave me a desire to dive deeper.</p>
+
+<p>That search for growth led me to a mentorship program where I was paired with Jessica Robinson, founder of Affiliate Marketing Partners (AMP). Like most people outside of affiliate marketing, I originally thought &ldquo;affiliate&rdquo; just meant &ldquo;influencer,&rdquo; but quickly learned affiliate marketing is a massive, sophisticated ecosystem of its own.</p>
+
+<h2>Culture Meets Career</h2>
+
+<p>I joined AMP as Jessica&rsquo;s mentee in late 2024, working just 10 hours a week. My start felt like a true &ldquo;trial by fire&rdquo;: Jessica went on maternity leave right after I started, leaving me to manage the operations of an agency specifically niched in the fintech and finance space. I would be in meetings nodding sagely about user acquisition for brands like FloatMe, then immediately Google search &ldquo;what is a cash advance.&rdquo;</p>
+
+<p>While I spent those early months optimizing our CRM, building workflows and SOPs, mastering our tech stack, and earning certifications in Impact and Everflow, what really made the experience work was the culture. Even with our founder away, the team&rsquo;s &ldquo;no gatekeeping&rdquo; mentality and total transparency made me feel like an essential part of the engine from day one. Between the supportive environment and the team&rsquo;s belief in my potential, I was excited to officially join the AMP team full-time.</p>
+
+<h2>A Rookie&rsquo;s Guide (or Lack Thereof) to Affiliate Marketing</h2>
+
+<p>The biggest hump for me was not the work itself, but the terms used in the industry. In real estate, the vocabulary is fixed. In affiliate marketing, everyone has their own preferred terms. One person&rsquo;s &ldquo;publisher&rdquo; is another&rsquo;s &ldquo;I sell traffic,&rdquo; or an &ldquo;advertiser&rdquo; is also sometimes called &ldquo;brand&rdquo; or even &ldquo;buyer.&rdquo; The terms became even more convoluted when I dove into specific partner types. I have heard ten different explanations of what &ldquo;programmatic&rdquo; is from ten different programmatic partners. Then there is &ldquo;offerwall,&rdquo; a word that for some is synonymous with incentivized traffic, but for others, it is a literal wall of offers within their direct app.</p>
+
+<p>Since there is no college degree or standard manual for this, I realized early on that it is less about having the &ldquo;right&rdquo; credentials and more about just being a person people can actually trust to follow through. I was a rookie building a reputation with a blank canvas, navigating a fragmented landscape where my word was the only thing that really carried weight.</p>
+
+<p>In an industry that finds different ways to say the same thing, I eventually found my own way to communicate the vision without sticking to a standard script. Once the focus shifted to the actual goals, the conversations became more efficient, and honestly, more fun. Let&rsquo;s be real: we are not exactly saving lives here. We are just talking to people who have the same goals and figuring out a win-win. It is exciting to see a natural conversation translate into real value and money for our accounts. In a world where AI is taking over, that human element is still the best part of the business.</p>
+
+<h2>Beyond My MacBook: NYC &amp; Vegas</h2>
+
+<p>The true &ldquo;graduation&rdquo; of my first year was moving from Google Meet screens to real in-person events at Affiliate Summit East (NYC) and Affiliate Summit West (Vegas).</p>
+
+<p>If you ask the people I met there, they might refer to this industry as a bunch of &ldquo;professional degenerates.&rdquo; I say that with love because it captures the spirit perfectly: a community of high-level hustlers who are surprisingly chill and collaborative. Unlike the cutthroat nature of some industries, people here are genuinely willing to help you find your footing.</p>
+
+<p>I have been blessed to find a mentor and a team who are solid, human, and quite frankly, people I would actually want to have a beer with. We are here to build a vision and create partnerships, but we are also here to have our own lives.</p>
+
+<h2>The Pivot, One Year Later</h2>
+
+<p>A full year into my journey as a full-time member of the AMP team, I now manage our marketplaces with a focus on high-level growth&mdash;from vetting valuable offers and negotiating terms to building the strategies that drive revenue for our clients and help partnerships scale.</p>
+
+<p>I have become so immersed in the fintech world that my digital life has been completely hijacked. The only ads I get from social media now are a revolving door of credit-building apps, save-money tools, debt relief services, and more. Between what I search and what my phone overhears in my daily meetings, Instagram is most likely convinced I am in a massive financial crisis. It is a small price to pay for finally finding a career (and a team) that clicks.</p>',
+		),
 
 		array(
 			'title'    => 'The Secret to Affiliate Success is AI (not that one!)',
