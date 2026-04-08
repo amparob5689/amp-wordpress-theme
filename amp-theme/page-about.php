@@ -73,65 +73,80 @@ $contact_url = home_url( '/contact/' );
 				</div>
 			</div>
 
-			<div class="team-card fade-in fade-in-delay-1">
-				<div class="team-card-inner">
-					<div class="team-card-front">
-						<div class="team-avatar">
-							<img src="<?php echo esc_url( $img_dir . '/headshots/andy headshot.webp' ); ?>" alt="Andy Shal">
-						</div>
-						<h3 class="team-name">Andy Shal</h3>
-						<span class="team-role">Affiliate Marketing Manager</span>
+		<div class="team-card fade-in fade-in-delay-1">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/dan-desilva.webp' ); ?>" alt="Daniel DeSilva">
 					</div>
-					<div class="team-card-back">
-						<p>With 15+ years in affiliate marketing focused on financial services, Andy brings deep industry knowledge and an extensive publisher network. He specializes in uncovering unique growth opportunities for clients across the fintech space.</p>
-					</div>
+					<h3 class="team-name">Daniel DeSilva</h3>
+					<span class="team-role">Head of Client Services & Network Strategy</span>
+				</div>
+				<div class="team-card-back">
+					<p>Dan DeSilva is an affiliate and partnerships leader with 15 years of experience in performance marketing. His previous experience includes scaling a full-service agency and operating across both brand and publisher sides of the ecosystem.</p>
 				</div>
 			</div>
+		</div>
 
-			<div class="team-card fade-in fade-in-delay-2">
-				<div class="team-card-inner">
-					<div class="team-card-front">
-						<div class="team-avatar">
-							<img src="<?php echo esc_url( $img_dir . '/headshots/Candace+Headshot.webp' ); ?>" alt="Candace Massari" style="object-position:center 15%;">
-						</div>
-						<h3 class="team-name">Candace Massari</h3>
-						<span class="team-role">Affiliate Marketing Manager</span>
+		<div class="team-card fade-in fade-in-delay-2">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/andy headshot.webp' ); ?>" alt="Andy Shal">
 					</div>
-					<div class="team-card-back">
-						<p>With 10+ years in affiliate marketing, Candace specializes in partnership strategy and growth across fintech and insurtech. From scaling programs to building marketplace channels, she brings deep experience across the financial services landscape.</p>
-					</div>
+					<h3 class="team-name">Andy Shal</h3>
+					<span class="team-role">Affiliate Marketing Manager</span>
+				</div>
+				<div class="team-card-back">
+					<p>With 15+ years in affiliate marketing focused on financial services, Andy brings deep industry knowledge and an extensive publisher network. He specializes in uncovering unique growth opportunities for clients across the fintech space.</p>
 				</div>
 			</div>
+		</div>
 
-			<div class="team-card fade-in fade-in-delay-3">
-				<div class="team-card-inner">
-					<div class="team-card-front">
-						<div class="team-avatar">
-							<img src="<?php echo esc_url( $img_dir . '/headshots/Jenn Headshot.webp' ); ?>" alt="Jenn Briggs">
-						</div>
-						<h3 class="team-name">Jenn Briggs</h3>
-						<span class="team-role">Marketplace Operations</span>
+		<div class="team-card fade-in fade-in-delay-3">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/Candace+Headshot.webp' ); ?>" alt="Candace Massari" style="object-position:center 15%;">
 					</div>
-					<div class="team-card-back">
-						<p>With 15+ years in marketing and communications, Jenn helps fintech brands grow through compelling messaging and thoughtful negotiation. She builds win-win partnerships grounded in trust that drive meaningful, lasting results.</p>
-					</div>
+					<h3 class="team-name">Candace Massari</h3>
+					<span class="team-role">Affiliate Marketing Manager</span>
+				</div>
+				<div class="team-card-back">
+					<p>With 10+ years in affiliate marketing, Candace specializes in partnership strategy and growth across fintech and insurtech. From scaling programs to building marketplace channels, she brings deep experience across the financial services landscape.</p>
 				</div>
 			</div>
+		</div>
 
-			<div class="team-card fade-in fade-in-delay-4">
-				<div class="team-card-inner">
-					<div class="team-card-front">
-						<div class="team-avatar">
-							<img src="<?php echo esc_url( $img_dir . '/headshots/Amy Headshot.webp' ); ?>" alt="Amy Park">
-						</div>
-						<h3 class="team-name">Amy Park</h3>
-						<span class="team-role">Account Specialist, Operations</span>
+		<div class="team-card fade-in fade-in-delay-4">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/Jenn Headshot.webp' ); ?>" alt="Jenn Briggs">
 					</div>
-					<div class="team-card-back">
-						<p>Amy drives both marketplace growth and internal operations at AMP. She leads partner acquisition and offer selection across accounts while building the workflows and systems that help the team scale efficiently.</p>
-					</div>
+					<h3 class="team-name">Jenn Briggs</h3>
+					<span class="team-role">Marketplace Operations</span>
+				</div>
+				<div class="team-card-back">
+					<p>With 15+ years in marketing and communications, Jenn helps fintech brands grow through compelling messaging and thoughtful negotiation. She builds win-win partnerships grounded in trust that drive meaningful, lasting results.</p>
 				</div>
 			</div>
+		</div>
+
+		<div class="team-card fade-in fade-in-delay-5">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/Amy Headshot.webp' ); ?>" alt="Amy Park">
+					</div>
+					<h3 class="team-name">Amy Park</h3>
+					<span class="team-role">Account Specialist, Operations</span>
+				</div>
+				<div class="team-card-back">
+					<p>Amy drives both marketplace growth and internal operations at AMP. She leads partner acquisition and offer selection across accounts while building the workflows and systems that help the team scale efficiently.</p>
+				</div>
+			</div>
+		</div>
 
 		</div>
 	</div>

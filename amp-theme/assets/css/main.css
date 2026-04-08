@@ -1465,6 +1465,7 @@ img { max-width: 100%; display: block; }
 .fade-in-delay-2 { transition-delay: 0.2s; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
+.fade-in-delay-5 { transition-delay: 0.5s; }
 
 /* ===== SERVICES PAGE — HERO ===== */
 .services-hero {
@@ -3058,7 +3059,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit:hover {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 48px;
 }
