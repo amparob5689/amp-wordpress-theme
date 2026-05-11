@@ -77,7 +77,7 @@ $contact_url = home_url( '/contact/' );
 				<div class="team-card-inner">
 					<div class="team-card-front">
 						<div class="team-avatar">
-							<img src="<?php echo esc_url( $img_dir . '/headshots/alex headshot.png' ); ?>" alt="Alex Robinson">
+							<img src="<?php echo esc_url( $img_dir . '/headshots/alex headshot.png' ); ?>" alt="Alex Robinson" style="object-position:center 20%;transform:scale(1.15);">
 						</div>
 						<h3 class="team-name">Alex Robinson</h3>
 						<span class="team-role">Co-founder</span>
