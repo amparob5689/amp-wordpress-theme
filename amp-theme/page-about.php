@@ -65,7 +65,7 @@ $contact_url = home_url( '/contact/' );
 							<img src="<?php echo esc_url( $img_dir . '/headshots/jessica headshot.webp' ); ?>" alt="Jessica Robinson" style="object-position:center 30%;transform:scale(1.3);">
 						</div>
 						<h3 class="team-name">Jessica Robinson</h3>
-						<span class="team-role">Founder</span>
+						<span class="team-role">Co-founder</span>
 					</div>
 					<div class="team-card-back">
 						<p>Former Global Head of Affiliates at PayPal with 15+ years in performance marketing for financial services. Jessica founded AMP to give financial brands access to the same caliber of affiliate strategy that Fortune 500 companies rely on.</p>
@@ -73,7 +73,22 @@ $contact_url = home_url( '/contact/' );
 				</div>
 			</div>
 
-		<div class="team-card fade-in fade-in-delay-1">
+			<div class="team-card fade-in fade-in-delay-1">
+				<div class="team-card-inner">
+					<div class="team-card-front">
+						<div class="team-avatar">
+							<img src="<?php echo esc_url( $img_dir . '/headshots/alex headshot.png' ); ?>" alt="Alex Robinson">
+						</div>
+						<h3 class="team-name">Alex Robinson</h3>
+						<span class="team-role">Co-founder</span>
+					</div>
+					<div class="team-card-back">
+						<p>With 15+ years across tech, data analytics, marketing and loyalty, Alex co-founded AMP to build the operational and data backbone behind every client program. He leads AMP's technology, operations, data infrastructure, and AI strategy.</p>
+					</div>
+				</div>
+			</div>
+
+		<div class="team-card fade-in fade-in-delay-2">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
@@ -88,7 +103,7 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-2">
+		<div class="team-card fade-in fade-in-delay-3">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
@@ -103,7 +118,7 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-3">
+		<div class="team-card fade-in fade-in-delay-4">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
@@ -118,7 +133,7 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-4">
+		<div class="team-card fade-in fade-in-delay-5">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
@@ -133,7 +148,7 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-5">
+		<div class="team-card fade-in fade-in-delay-6">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">

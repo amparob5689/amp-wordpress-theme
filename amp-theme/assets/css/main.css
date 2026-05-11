@@ -1466,6 +1466,7 @@ img { max-width: 100%; display: block; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
 .fade-in-delay-5 { transition-delay: 0.5s; }
+.fade-in-delay-6 { transition-delay: 0.6s; }
 
 /* ===== SERVICES PAGE — HERO ===== */
 .services-hero {
@@ -3064,6 +3065,10 @@ div.wpforms-container-full .wpforms-form .wpforms-submit:hover {
   margin-top: 48px;
 }
 
+.team-card:last-child:nth-child(3n+1) {
+  grid-column: 2;
+}
+
 .team-card {
   perspective: 800px;
   height: 320px;
@@ -3175,6 +3180,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit:hover {
   .about-values-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .team-card { height: 280px; }
+  .team-card:last-child:nth-child(3n+1) { grid-column: auto; }
 }
 
 @media (max-width: 480px) {
