@@ -10,12 +10,99 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function amp_theme_seed_blog_posts() {
-	$seed_version = 6;
+	$seed_version = 7;
 	if ( (int) get_option( 'amp_theme_blog_seed_version', 0 ) >= $seed_version ) {
 		return;
 	}
 
+	$chart_img = esc_url( get_template_directory_uri() . '/assets/images/blog/new-to-business-affiliate-vs-paid-media.png' );
+
 	$posts = array(
+
+		array(
+			'title'    => 'Why Affiliate Marketing Drives More New Customers Than Paid Media in Financial Services',
+			'slug'     => 'affiliate-marketing-new-customer-acquisition-financial-services',
+			'date'     => '2026-05-18 10:00:00',
+			'author'   => 'Jessica Robinson',
+			'category' => 'Industry Insights',
+			'excerpt'  => 'A financial services affiliate program delivered ~71-72% net new customers vs. ~49-53% from paid media over six months. Here&rsquo;s why affiliate consistently wins on new customer acquisition.',
+			'content'  => '<p>Affiliate marketing delivers a higher rate of net new customers than paid media for financial services and fintech companies. We&rsquo;ve seen this consistently across our client portfolio, but now we have the data to prove it.</p>
+
+<p>In the affiliate world, we&rsquo;re constantly fighting to prove our value against other channels and budget. I&rsquo;m proud to say we&rsquo;ve consistently seen our affiliate programs outperforming other paid media, especially in financial services where the cost of acquiring a truly new customer is high.</p>
+
+<h2>How We Measured New Customer Acquisition: Affiliate vs. Paid Media</h2>
+
+<p>One of our financial services clients pays their partners on new customers to the business. A new customer is defined as net new to the business or a lapsed user that hasn&rsquo;t used the service in 12 months or more. Unfortunately, their front-end tracking can&rsquo;t parse out the difference when passing that data back to marketing platforms.</p>
+
+<p>So, we worked with the internal analytics team to understand the split between net new vs. lapsed users across every marketing channel. The goal was simple: of all the customers each channel brings in, how many are actually new to the business?</p>
+
+<h2>The Results: Affiliate vs. Paid Media on New Customer Acquisition</h2>
+
+<div class="bs-stats-row">
+<div class="bs-stat-box">
+<div class="bs-stat-number">~72%</div>
+<div class="bs-stat-label">Net new customers from Affiliate</div>
+</div>
+<div class="bs-stat-box">
+<div class="bs-stat-number">~50%</div>
+<div class="bs-stat-label">Net new customers from Paid Media</div>
+</div>
+</div>
+
+<p>Affiliates delivered ~72% net new customers to the business, holding steady every month over a six-month period.</p>
+
+<p>Other paid media delivered ~50% net new customers to the business, and trended downward over the same period.</p>
+
+<img src="' . $chart_img . '" alt="Line chart comparing new-to-franchise customer rates for a financial services company: affiliate channel steady at 71-72% vs paid media at 49-53% over six months (Sep 2025 to Feb 2026)">
+
+<p>Over six months, the affiliate program brought in net new customers at a rate roughly 21 percentage points higher than other paid media channels. That gap never closed.</p>
+
+<blockquote><p>&ldquo;Why can&rsquo;t all of our marketing look like this?&rdquo;</p>
+<p>&mdash; CEO of a financial services company, traditionally skeptical of affiliate marketing</p></blockquote>
+
+<h2>What Makes Affiliate Different From Paid Media</h2>
+
+<p>The question is why was this the case? It comes down to how affiliate marketing actually works compared to other digital channels.</p>
+
+<p>Affiliate marketing is partnering with publishers to promote your brand or financial product to their audiences. In financial services, those publishers are often personal finance blogs, comparison sites, financial education platforms, and content creators covering money topics. Their audiences are people actively researching financial products for the first time, or looking to switch providers. They&rsquo;re not already in your database.</p>
+
+<p>Other digital media uses algorithms to find likely customers. Even when setting up a negative match targeting campaign to block existing users, it&rsquo;s still grabbing a lot of previous customers that only use the service once per year. Those are not profitable customers for a financial services company paying real acquisition costs.</p>
+
+<h2>The Hidden Cost of Re-Acquiring Existing Customers</h2>
+
+<p>This is the gap that most financial services marketing teams miss. Paid media looks efficient on a per-click basis, but when you dig into who&rsquo;s actually converting, a huge portion are people you&rsquo;ve already acquired. You&rsquo;re paying to re-acquire your own customers.</p>
+
+<p>Affiliate flips that dynamic because publishers are reaching people who aren&rsquo;t already in your funnel. A personal finance blogger writing about the best money transfer apps is reaching readers who are genuinely shopping. A paid social ad with algorithmic targeting is more likely to hit someone who already has an account but hasn&rsquo;t used it recently.</p>
+
+<p>For financial services companies where customer lifetime value is everything, that distinction between a truly new customer and a re-acquired lapsed user is the difference between a profitable channel and a money pit.</p>
+
+<h2>How to Measure This in Your Own Program</h2>
+
+<p>If your financial services or fintech team isn&rsquo;t tracking the net new vs. lapsed split across channels, you&rsquo;re flying blind on true acquisition cost. Here&rsquo;s what to look at:</p>
+
+<p>Work with your analytics or BI team to break out new customer conversions by channel. Define &ldquo;new&rdquo; clearly (we use net new to the business or lapsed 12+ months). Then compare the net new rate for your affiliate program against paid search, paid social, and display. The headline CPA might look comparable between affiliate and paid media, but the quality of those customers is often very different.</p>
+
+<p>We see this pattern across our financial services and fintech clients. Affiliate consistently delivers a higher share of genuinely new customers because the channel works differently than algorithmic targeting.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Does affiliate marketing work for financial services and fintech companies?</h3>
+
+<p>Yes. Affiliate marketing is one of the most effective customer acquisition channels for financial services and fintech brands. Because affiliate partners promote to their own audiences (often personal finance readers actively researching products), the channel delivers a higher percentage of net new customers compared to paid media.</p>
+
+<h3>Why does affiliate marketing bring in more new customers than paid media?</h3>
+
+<p>Affiliate publishers reach audiences that aren&rsquo;t already in an advertiser&rsquo;s database. In financial services, these are readers of personal finance blogs, comparison sites, and financial content creators. Paid media relies on algorithmic targeting, which often re-acquires existing or lapsed customers even when exclusion lists are in place.</p>
+
+<h3>How do you measure new customer acquisition from affiliate marketing?</h3>
+
+<p>Work with your internal analytics team to break out conversions by channel, separating net new customers from lapsed users (typically defined as inactive for 12+ months). Compare the net new rate across affiliate, paid search, paid social, and display to see which channels are actually bringing in first-time customers.</p>
+
+<div class="bs-cta-box">
+<p><a href="https://ampconsulting.co">Affiliate Marketing Partners (AMP)</a> builds and manages affiliate programs for financial services and fintech companies. We&rsquo;re happy to audit your existing program or provide a strategy for launching a new one.</p>
+<a href="https://ampconsulting.co/contact" class="bs-cta-btn">Get in Touch</a>
+</div>',
+		),
 
 		array(
 			'title'    => 'My First 365 Days in Affiliate Marketing',
