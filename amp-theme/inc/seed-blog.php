@@ -25,7 +25,7 @@ function amp_theme_seed_blog_posts() {
 			'date'     => '2026-05-18 10:00:00',
 			'author'   => 'Jessica Robinson',
 			'category' => 'Industry Insights',
-			'excerpt'  => 'A financial services affiliate program delivered ~71-72% net new customers vs. ~49-53% from paid media over six months. Here&rsquo;s why affiliate consistently wins on new customer acquisition.',
+			'excerpt'  => 'A financial services affiliate program delivered ~72% net new customers vs. ~50% from paid media over six months. Here&rsquo;s why affiliate consistently wins on new customer acquisition.',
 			'content'  => '<p>Affiliate marketing delivers a higher rate of net new customers than paid media for financial services and fintech companies. We&rsquo;ve seen this consistently across our client portfolio, but now we have the data to prove it.</p>
 
 <p>In the affiliate world, we&rsquo;re constantly fighting to prove our value against other channels and budget. I&rsquo;m proud to say we&rsquo;ve consistently seen our affiliate programs outperforming other paid media, especially in financial services where the cost of acquiring a truly new customer is high.</p>
