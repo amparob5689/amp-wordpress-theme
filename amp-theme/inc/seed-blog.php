@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function amp_theme_seed_blog_posts() {
-	$seed_version = 7;
+	$seed_version = 8;
 	if ( (int) get_option( 'amp_theme_blog_seed_version', 0 ) >= $seed_version ) {
 		return;
 	}
@@ -100,6 +100,7 @@ function amp_theme_seed_blog_posts() {
 
 <div class="bs-cta-box">
 <p>Affiliate Marketing Partners (AMP) builds and manages affiliate programs for financial services and fintech companies. We&rsquo;re happy to audit your existing program or provide a strategy for launching a new one.</p>
+<a href="https://affiliatemarketingpartners.co/contact/" class="bs-cta-btn">Get in Touch</a>
 </div>',
 		),
 
