@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function amp_theme_seed_blog_posts() {
-	$seed_version = 8;
+	$seed_version = 9;
 	if ( (int) get_option( 'amp_theme_blog_seed_version', 0 ) >= $seed_version ) {
 		return;
 	}
@@ -430,8 +430,11 @@ function amp_theme_seed_blog_posts() {
 		$existing = get_page_by_path( $post_data['slug'], OBJECT, 'post' );
 		if ( $existing ) {
 			wp_update_post( array(
-				'ID'        => $existing->ID,
-				'post_date' => $post_data['date'],
+				'ID'           => $existing->ID,
+				'post_title'   => $post_data['title'],
+				'post_date'    => $post_data['date'],
+				'post_excerpt' => $post_data['excerpt'],
+				'post_content' => $post_data['content'],
 			) );
 			update_post_meta( $existing->ID, '_amp_author_name', $post_data['author'] );
 			if ( ! empty( $post_data['category'] ) ) {
