@@ -99,8 +99,7 @@ function amp_theme_seed_blog_posts() {
 <p>Work with your internal analytics team to break out conversions by channel, separating net new customers from lapsed users (typically defined as inactive for 12+ months). Compare the net new rate across affiliate, paid search, paid social, and display to see which channels are actually bringing in first-time customers.</p>
 
 <div class="bs-cta-box">
-<p><a href="https://ampconsulting.co">Affiliate Marketing Partners (AMP)</a> builds and manages affiliate programs for financial services and fintech companies. We&rsquo;re happy to audit your existing program or provide a strategy for launching a new one.</p>
-<a href="https://ampconsulting.co/contact" class="bs-cta-btn">Get in Touch</a>
+<p>Affiliate Marketing Partners (AMP) builds and manages affiliate programs for financial services and fintech companies. We&rsquo;re happy to audit your existing program or provide a strategy for launching a new one.</p>
 </div>',
 		),
 
