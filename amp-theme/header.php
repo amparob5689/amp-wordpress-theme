@@ -3,6 +3,9 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php if ( is_front_page() ) : ?>
+  <meta name="impact-site-verification" value="13dd5379-a24c-4d1d-8228-cb32b499b3b5">
+  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
