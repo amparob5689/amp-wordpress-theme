@@ -66,6 +66,14 @@ function amp_theme_dealfront_tracker() {
 }
 add_action( 'wp_head', 'amp_theme_dealfront_tracker' );
 
+function amp_theme_impact_verification() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	echo '<meta name="impact-site-verification" value="13dd5379-a24c-4d1d-8228-cb32b499b3b5">';
+}
+add_action( 'wp_head', 'amp_theme_impact_verification' );
+
 /**
  * Enqueue styles and scripts.
  */
