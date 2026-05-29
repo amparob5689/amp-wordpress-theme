@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <?php if ( is_front_page() ) : ?>
-<meta name='impact-site-verification' value='6aa96055-0a32-4924-b387-df0522d2fbb2'>
+<script type="text/javascript">(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7347498-20b4-43a2-83d7-4d1688e5efad1.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');</script>
 <?php endif; ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
