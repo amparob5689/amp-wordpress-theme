@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-  <?php if ( is_front_page() ) : ?>
-  <meta name="impact-site-verification" value="6aa96055-0a32-4924-b387-df0522d2fbb2">
-  <?php endif; ?>
+<?php if ( is_front_page() ) : ?>
+<meta name='impact-site-verification' value='6aa96055-0a32-4924-b387-df0522d2fbb2'>
+<?php endif; ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
