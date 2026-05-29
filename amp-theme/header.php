@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
   <?php if ( is_front_page() ) : ?>
-  <meta name="impact-site-verification" value="4476432c-4840-44c1-bc7c-fd991924077f">
+  <meta name="impact-site-verification" value="6aa96055-0a32-4924-b387-df0522d2fbb2">
   <?php endif; ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
