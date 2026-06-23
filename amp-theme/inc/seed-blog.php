@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function amp_theme_seed_blog_posts() {
-	$seed_version = 9;
+	$seed_version = 10;
 	if ( (int) get_option( 'amp_theme_blog_seed_version', 0 ) >= $seed_version ) {
 		return;
 	}
@@ -152,7 +152,7 @@ function amp_theme_seed_blog_posts() {
 			'title'    => 'The Secret to Affiliate Success is AI (not that one!)',
 			'slug'     => 'secret-to-affiliate-success-is-ai',
 			'date'     => '2026-01-24 10:00:00',
-			'author'   => 'Andy Shal',
+			'author'   => 'AMP Team',
 			'category' => 'Industry Insights',
 			'excerpt'  => 'AI is all the rage these days, but the AI that matters most in affiliate marketing is Agency Insights. Why the human touch is the ultimate premium feature in a digitized ecosystem.',
 			'content'  => '<p>AI is all the rage these days. A recent survey by the Performance Marketing Association highlights significant concerns regarding increased fraud, the erosion of strategic relationships, and the devaluation of original content.</p>
