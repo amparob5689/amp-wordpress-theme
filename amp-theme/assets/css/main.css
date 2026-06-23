@@ -3128,11 +3128,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit:hover {
   height: 320px;
 }
 
-.team-card:nth-child(4),
-.team-card:nth-child(6) {
-  grid-column: 2 / span 2;
-}
-
 .team-card-inner {
   position: relative;
   width: 100%;
