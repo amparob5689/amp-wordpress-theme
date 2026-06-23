@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'AMP_THEME_VERSION', '1.0.0' );
+define( 'AMP_THEME_VERSION', '1.0.1' );
 
 require_once get_template_directory() . '/inc/post-types.php';
 require_once get_template_directory() . '/inc/schema.php';
