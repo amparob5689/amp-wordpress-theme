@@ -24,7 +24,8 @@ $img_dir = get_template_directory_uri() . '/assets/images/logos';
       </span>
       <img src="<?php echo esc_url( $img_dir . '/client-atm-color.svg' ); ?>" alt="ATM" class="trust-logo">
       <img src="<?php echo esc_url( $img_dir . '/client-piere.svg' ); ?>" alt="Piere" class="trust-logo">
-      <img src="<?php echo esc_url( $img_dir . '/client-afn.svg' ); ?>" alt="Advance Funds Network" class="trust-logo" style="height:38px">
+      <img src="<?php echo esc_url( $img_dir . '/client-kapitus.png' ); ?>" alt="Kapitus" class="trust-logo" style="height:30px">
+      <img src="<?php echo esc_url( $img_dir . '/client-menthorq.png' ); ?>" alt="MenthorQ" class="trust-logo">
     </div>
   </div>
 </section>
