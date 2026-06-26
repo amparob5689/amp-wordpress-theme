@@ -548,11 +548,15 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px 36px;
-  flex-wrap: wrap;
+  gap: 48px;
+  flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0 24px;
 }
 
 .trust-logos::-webkit-scrollbar { display: none; }
