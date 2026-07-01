@@ -180,7 +180,7 @@ add_action( 'customize_register', 'amp_theme_customizer' );
  * Uses an option flag so it only runs the creation logic once.
  */
 function amp_theme_auto_setup_pages() {
-	$pages_version = 5;
+	$pages_version = 6;
 	if ( (int) get_option( 'amp_theme_pages_version', 0 ) >= $pages_version ) {
 		return;
 	}
@@ -215,6 +215,16 @@ function amp_theme_auto_setup_pages() {
 			'title'    => 'Blog',
 			'slug'     => 'blog',
 			'template' => '',
+		),
+		'privacy-policy' => array(
+			'title'    => 'Privacy Policy',
+			'slug'     => 'privacy-policy',
+			'template' => 'page-privacy-policy.php',
+		),
+		'cookie-policy' => array(
+			'title'    => 'Cookie Policy',
+			'slug'     => 'cookie-policy',
+			'template' => 'page-cookie-policy.php',
 		),
 	);
 
@@ -251,6 +261,10 @@ function amp_theme_auto_setup_pages() {
 
 	if ( ! empty( $pages['blog']['id'] ) && ! is_wp_error( $pages['blog']['id'] ) ) {
 		update_option( 'page_for_posts', $pages['blog']['id'] );
+	}
+
+	if ( ! empty( $pages['privacy-policy']['id'] ) && ! is_wp_error( $pages['privacy-policy']['id'] ) ) {
+		update_option( 'wp_page_for_privacy_policy', $pages['privacy-policy']['id'] );
 	}
 
 	// Delete default "Hello World" post.
