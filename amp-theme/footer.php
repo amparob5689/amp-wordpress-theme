@@ -66,6 +66,10 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-copy">&copy; <?php echo esc_html( date( 'Y' ) ); ?> Affiliate Marketing Partners LLC. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy Policy</a>
+          <a href="<?php echo esc_url( home_url( '/cookie-policy/' ) ); ?>">Cookie Policy</a>
+        </div>
       </div>
     </div>
   </footer>
