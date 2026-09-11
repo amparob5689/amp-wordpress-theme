@@ -95,7 +95,7 @@ $contact_url = home_url( '/contact/' );
 						<img src="<?php echo esc_url( $img_dir . '/headshots/dan-desilva.webp' ); ?>" alt="Daniel DeSilva">
 					</div>
 					<h3 class="team-name">Daniel DeSilva</h3>
-					<span class="team-role">Head of Client Services & Network Strategy</span>
+					<span class="team-role">Head of Client Services</span>
 				</div>
 				<div class="team-card-back">
 					<p>Dan DeSilva is an affiliate and partnerships leader with 15 years of experience in performance marketing. His previous experience includes scaling a full-service agency and operating across both brand and publisher sides of the ecosystem.</p>
@@ -103,7 +103,38 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-4">
+
+		<div class="team-card fade-in">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/dani-lyon.webp' ); ?>" alt="Dani Lyon" style="object-position:center 20%;">
+					</div>
+					<h3 class="team-name">Dani Lyon</h3>
+					<span class="team-role">Head of Network Strategy</span>
+				</div>
+				<div class="team-card-back">
+					<p>Dani leads the AMP Affiliate Network and marketplace strategy. She previously led development of the Everflow marketplace and built Sovrn's Everflow integration, bringing deep platform and partner-development experience from Everflow, Sovrn, and PerformCB.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="team-card fade-in fade-in-delay-1">
+			<div class="team-card-inner">
+				<div class="team-card-front">
+					<div class="team-avatar">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/ben-fox.webp' ); ?>" alt="Ben Fox" style="object-position:center 40%;transform:scale(1.1);">
+					</div>
+					<h3 class="team-name">Ben Fox</h3>
+					<span class="team-role">Senior Affiliate Marketing Manager</span>
+				</div>
+				<div class="team-card-back">
+					<p>Ben has spent his career in fintech affiliate marketing, building programs from the ground up at Albert and launching new products at SoFi, including life insurance and SMB lending. He brings a partnerships-first approach to scaling programs for financial brands.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="team-card fade-in fade-in-delay-2">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
@@ -118,7 +149,7 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-5">
+		<div class="team-card fade-in">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
@@ -133,7 +164,7 @@ $contact_url = home_url( '/contact/' );
 			</div>
 		</div>
 
-		<div class="team-card fade-in fade-in-delay-6">
+		<div class="team-card fade-in fade-in-delay-1">
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
