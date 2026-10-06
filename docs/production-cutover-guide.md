@@ -150,7 +150,7 @@ Run through this checklist on the live domain:
 - [ ] Blog posts display correctly with correct authors and categories
 - [ ] Mobile navigation drawer works (hamburger menu, swipe to close)
 - [ ] SSL padlock shows in browser (https)
-- [ ] Favicon (squiggle) appears in browser tab
+- [ ] Favicon (squiggle) appears in browser tab, and `/favicon.ico` returns the squiggle (not the WordPress logo)
 - [ ] Client logos display on homepage trust bar
 - [ ] Team headshots and hover bios work on About page
 

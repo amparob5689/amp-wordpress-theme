@@ -55,9 +55,27 @@ function amp_theme_home_title( $title ) {
 add_filter( 'document_title_parts', 'amp_theme_home_title' );
 
 function amp_theme_favicon() {
-	echo '<link rel="icon" href="' . esc_url( get_template_directory_uri() . '/assets/images/favicon.svg' ) . '" type="image/svg+xml">';
+	$dir = get_template_directory_uri() . '/assets/images/';
+	echo '<link rel="icon" href="' . esc_url( $dir . 'favicon.svg' ) . '" type="image/svg+xml">' . "\n";
+	echo '<link rel="icon" href="' . esc_url( $dir . 'favicon-48.png' ) . '" sizes="48x48" type="image/png">' . "\n";
+	echo '<link rel="icon" href="' . esc_url( $dir . 'favicon-96.png' ) . '" sizes="96x96" type="image/png">' . "\n";
+	echo '<link rel="icon" href="' . esc_url( $dir . 'favicon-192.png' ) . '" sizes="192x192" type="image/png">' . "\n";
+	echo '<link rel="apple-touch-icon" href="' . esc_url( $dir . 'apple-touch-icon.png' ) . '">' . "\n";
 }
 add_action( 'wp_head', 'amp_theme_favicon' );
+
+// Without a Site Icon set, WordPress answers /favicon.ico with its own logo,
+// which is what Google shows in search results. Serve the AMP icon instead.
+function amp_theme_favicon_ico() {
+	if ( has_site_icon() ) {
+		return;
+	}
+	header( 'Content-Type: image/x-icon' );
+	header( 'Cache-Control: public, max-age=604800' );
+	readfile( get_template_directory() . '/assets/images/favicon.ico' );
+	exit;
+}
+add_action( 'do_faviconico', 'amp_theme_favicon_ico' );
 
 function amp_theme_dealfront_tracker() {
 	?>
