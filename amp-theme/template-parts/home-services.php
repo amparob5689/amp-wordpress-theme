@@ -5,6 +5,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $services_url = home_url( '/services/' );
 ?>
 

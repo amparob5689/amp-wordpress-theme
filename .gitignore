@@ -11,3 +11,7 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Local deploy config and internal docs (not for the public repo)
+deploy.env
+docs/

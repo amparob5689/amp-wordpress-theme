@@ -4,6 +4,10 @@
  *
  * @package AMP_Theme
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 
 <section class="section testimonials">

@@ -14,6 +14,7 @@ define( 'AMP_THEME_VERSION', '1.0.2' );
 require_once get_template_directory() . '/inc/post-types.php';
 require_once get_template_directory() . '/inc/schema.php';
 require_once get_template_directory() . '/inc/seed-blog.php';
+require_once get_template_directory() . '/inc/security.php';
 
 /**
  * Theme setup: menus, theme supports, image sizes.

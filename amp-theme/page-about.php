@@ -6,6 +6,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 $img_dir     = get_template_directory_uri() . '/assets/images';
 $contact_url = home_url( '/contact/' );

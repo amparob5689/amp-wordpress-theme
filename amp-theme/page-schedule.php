@@ -6,6 +6,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 $calendly_url = get_theme_mod( 'amp_calendly_url', 'https://calendly.com/jessica-nqq/30min' );
 ?>

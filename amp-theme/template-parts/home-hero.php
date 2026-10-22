@@ -5,6 +5,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $contact_email = amp_get_contact_email();
 $cta_text      = amp_get_cta_text();
 $img_dir       = get_template_directory_uri() . '/assets/images/logos';
