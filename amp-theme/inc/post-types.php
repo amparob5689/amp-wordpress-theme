@@ -147,7 +147,7 @@ function amp_case_study_details_callback( $post ) {
  * Save case study meta data.
  */
 function amp_case_study_save_meta( $post_id ) {
-	if ( ! isset( $_POST['amp_case_study_nonce'] ) || ! wp_verify_nonce( $_POST['amp_case_study_nonce'], 'amp_case_study_save' ) ) {
+	if ( ! isset( $_POST['amp_case_study_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['amp_case_study_nonce'] ) ), 'amp_case_study_save' ) ) {
 		return;
 	}
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
@@ -173,12 +173,19 @@ function amp_case_study_save_meta( $post_id ) {
 
 	foreach ( $text_fields as $field => $meta_key ) {
 		if ( isset( $_POST[ $field ] ) ) {
-			update_post_meta( $post_id, $meta_key, sanitize_text_field( $_POST[ $field ] ) );
+			$value = wp_unslash( $_POST[ $field ] );
+			if ( 'amp_accent_color' === $field ) {
+				$value = sanitize_hex_color( $value );
+				if ( ! $value ) {
+					continue;
+				}
+			}
+			update_post_meta( $post_id, $meta_key, sanitize_text_field( $value ) );
 		}
 	}
 
 	if ( isset( $_POST['amp_quote_text'] ) ) {
-		update_post_meta( $post_id, '_amp_quote_text', sanitize_textarea_field( $_POST['amp_quote_text'] ) );
+		update_post_meta( $post_id, '_amp_quote_text', sanitize_textarea_field( wp_unslash( $_POST['amp_quote_text'] ) ) );
 	}
 }
 add_action( 'save_post_case_study', 'amp_case_study_save_meta' );

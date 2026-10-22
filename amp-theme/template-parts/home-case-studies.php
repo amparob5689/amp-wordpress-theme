@@ -6,6 +6,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $case_studies = new WP_Query( array(
 	'post_type'      => 'case_study',
 	'posts_per_page' => 3,

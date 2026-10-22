@@ -5,6 +5,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $client  = amp_get_case_study_meta( get_the_ID(), 'client_name' );
 $industry = amp_get_case_study_meta( get_the_ID(), 'client_industry' );
 $accent  = amp_get_case_study_meta( get_the_ID(), 'accent_color' ) ?: '#FFB000';

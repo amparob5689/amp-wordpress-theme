@@ -6,6 +6,10 @@
  * @package AMP_Theme
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 get_header();
 $contact_email = amp_get_contact_email();
 ?>

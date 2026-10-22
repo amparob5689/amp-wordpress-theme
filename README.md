@@ -25,7 +25,10 @@ Custom WordPress theme for [Affiliate Marketing Partners](https://affiliatemarke
 2. Connect your GitHub account
 3. Install theme from this repo -- push-to-deploy updates automatically
 
-### Option B: Manual Upload
+### Option B: rsync over SSH
+Copy `deploy.env.example` to `deploy.env` (gitignored), fill in the server host, user and theme path, then run `./deploy.sh` (`DRY_RUN=1 ./deploy.sh` to preview). Requires an SSH key registered on the server.
+
+### Option C: Manual Upload
 1. Zip the `amp-theme/` folder
 2. Upload via WordPress Admin > Appearance > Themes > Add New > Upload
 

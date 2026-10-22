@@ -4,6 +4,10 @@
  *
  * @package AMP_Theme
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 
 <a href="<?php the_permalink(); ?>" class="blog-card fade-in">
