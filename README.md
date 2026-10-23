@@ -64,5 +64,5 @@ amp-theme/
 - **Google Site Kit** -- Analytics + Search Console
 - **WPForms Lite** -- Contact form
 - **WP Super Cache** -- Page caching
-- **UpdraftPlus** -- Automated backups
+- **Backups** -- Use Cloudways server backups. Avoid backup plugins (UpdraftPlus, All-in-One WP Migration) that store archives inside `wp-content`: Nginx serves them publicly.
 - **Redirection** -- 301 redirects for Squarespace migration
