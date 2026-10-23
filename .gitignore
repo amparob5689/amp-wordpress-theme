@@ -15,3 +15,10 @@ Thumbs.db
 # Local deploy config and internal docs (not for the public repo)
 deploy.env
 docs/
+
+# Backup archives contain the full database. Never commit them.
+*.wpress
+*.sql
+*.sql.gz
+wp-content/ai1wm-backups/
+wp-content/updraft/
