@@ -127,13 +127,13 @@ $contact_url = home_url( '/contact/' );
 			<div class="team-card-inner">
 				<div class="team-card-front">
 					<div class="team-avatar">
-						<img src="<?php echo esc_url( $img_dir . '/headshots/ben-fox.webp' ); ?>" alt="Ben Fox" style="object-position:center 40%;transform:scale(1.1);">
+						<img src="<?php echo esc_url( $img_dir . '/headshots/Amy Headshot.webp' ); ?>" alt="Amy Park">
 					</div>
-					<h3 class="team-name">Ben Fox</h3>
-					<span class="team-role">Senior Affiliate Marketing Manager</span>
+					<h3 class="team-name">Amy Park</h3>
+					<span class="team-role">Partnerships Growth Lead</span>
 				</div>
 				<div class="team-card-back">
-					<p>Ben has spent his career in fintech affiliate marketing, building programs from the ground up at Albert and launching new products at SoFi, including life insurance and SMB lending. He brings a partnerships-first approach to scaling programs for financial brands.</p>
+					<p>Amy leads partnerships growth at AMP, driving network partnerships alongside marketplace growth and internal operations. She handles partner acquisition and offer selection across accounts while building the workflows and systems that help the team scale efficiently.</p>
 				</div>
 			</div>
 		</div>
@@ -164,21 +164,6 @@ $contact_url = home_url( '/contact/' );
 				</div>
 				<div class="team-card-back">
 					<p>With 15+ years in marketing and communications, Jenn helps fintech brands grow through compelling messaging and thoughtful negotiation. She builds win-win partnerships grounded in trust that drive meaningful, lasting results.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="team-card fade-in fade-in-delay-1">
-			<div class="team-card-inner">
-				<div class="team-card-front">
-					<div class="team-avatar">
-						<img src="<?php echo esc_url( $img_dir . '/headshots/Amy Headshot.webp' ); ?>" alt="Amy Park">
-					</div>
-					<h3 class="team-name">Amy Park</h3>
-					<span class="team-role">Account Specialist, Operations</span>
-				</div>
-				<div class="team-card-back">
-					<p>Amy drives both marketplace growth and internal operations at AMP. She leads partner acquisition and offer selection across accounts while building the workflows and systems that help the team scale efficiently.</p>
 				</div>
 			</div>
 		</div>
